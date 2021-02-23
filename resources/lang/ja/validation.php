@@ -116,6 +116,10 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'password' => 'パスワード',
+        'title' => 'タイトル',
+        'content' => '内容',
+    ],
 
 ];
