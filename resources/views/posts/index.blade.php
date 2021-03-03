@@ -14,12 +14,13 @@
                     @endif
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
-
+                    @auth
                     <a href="">
                       <button type="submit" class="btn btn-primary">
                       投稿する
                       </button>
                     </a>
+                    @endauth
 
                     <form method="" action="" class="d-flex">
                       <input class="form-control me-2" name="search" type="search" placeholder="検索する" aria-label="Search">
