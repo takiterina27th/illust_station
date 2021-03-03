@@ -7,7 +7,11 @@
             <div class="card">
 
                 <div class="card-body">
-                    
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
 
