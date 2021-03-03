@@ -37,6 +37,7 @@
                       
                       <div class="col mb-4">
                         <div class="card h-100">
+                          <img class="card-img-top" src="/storage/no-image.png" >
                           
                           <div class="card-body">
                             <h5 class="card-title">タイトル</h5>
