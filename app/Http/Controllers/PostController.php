@@ -34,7 +34,9 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post->title = $request->input('title');
+        $post->content = $request->input('content');
+        $post->user_id = Auth::user()->id;
     }
 
     /**
