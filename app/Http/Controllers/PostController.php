@@ -15,6 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
+        $query = Post::query();
+
         return view('posts.index');
     }
 
