@@ -44,7 +44,7 @@
                             <p class="card-text">{{ Str::limit($post->content, 60, '(…)' )}}</p>
                           </div>
                           <div class="card-footer">
-                            <small class="text-muted">作成者</small>
+                            <small class="text-muted">{{ $post->user->name}}</small>
                           </div>
                         </div>
                       </div>
