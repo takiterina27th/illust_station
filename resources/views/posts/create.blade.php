@@ -26,7 +26,7 @@
                       <br>
                       <input type="file" name="image">
                       <br>
-                      <input class="btn btn-info" type="submit" value="登録する">
+                      <input class="btn btn-info mt-2" type="submit" value="登録する">
                     </form>
                 </div>
             </div>
