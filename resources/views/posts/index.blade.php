@@ -34,20 +34,21 @@
                     </table>
                     
                     <div class="row row-cols-1 row-cols-md-3 g-4">
-                      
+                      @foreach($posts as $post)
                       <div class="col mb-4">
                         <div class="card h-100">
                           <img class="card-img-top" src="/storage/no-image.png" >
                           
                           <div class="card-body">
-                            <h5 class="card-title">タイトル</h5>
-                            <p class="card-text">テキスト</p>
+                            <h5 class="card-title">{{ Str::limit($post->title, 20, '(…)' )}}</h5>
+                            <p class="card-text">{{ Str::limit($post->content, 60, '(…)' )}}</p>
                           </div>
                           <div class="card-footer">
-                            <small class="text-muted">作成者</small>
+                            <small class="text-muted">{{ $post->user->name}}</small>
                           </div>
                         </div>
                       </div>
+                      @endforeach
                     </div>
                 </div>
             </div>

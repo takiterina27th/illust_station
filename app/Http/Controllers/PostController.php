@@ -15,7 +15,13 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        $query = Post::query();
+
+        $posts = $query->select('id', 'title', 'content', 'user_id', 'created_at')->get();
+
+        $user = Auth::user();
+
+        return view('posts.index', compact('posts', 'user'));
     }
 
     /**
