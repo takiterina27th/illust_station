@@ -20,6 +20,8 @@ class PostController extends Controller
         return view('posts.index');
         $query->select('id', 'title', 'content', 'user_id', 'created_at');
 
+        $user = Auth::user();
+
     }
 
     /**
