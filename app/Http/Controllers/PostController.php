@@ -18,6 +18,8 @@ class PostController extends Controller
         $query = Post::query();
 
         return view('posts.index');
+        $query->select('id', 'title', 'content', 'user_id', 'created_at');
+
     }
 
     /**
