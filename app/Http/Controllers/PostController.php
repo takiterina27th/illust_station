@@ -17,7 +17,7 @@ class PostController extends Controller
     {
         $query = Post::query();
 
-        $query->select('id', 'title', 'content', 'user_id', 'created_at');
+        $posts = $query->select('id', 'title', 'content', 'user_id', 'created_at');
 
         $user = Auth::user();
 
