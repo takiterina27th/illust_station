@@ -15,7 +15,7 @@
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
                     @auth
-                    <a href="">
+                    <a href="{{ route('posts.create') }}">
                       <button type="submit" class="btn btn-primary">
                       投稿する
                       </button>
