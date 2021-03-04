@@ -14,7 +14,7 @@
                         </div>
                     @endif
                
-                    <form method="" action="" enctype="multipart/form-data">
+                    <form method="POST" action="{{route('posts.store')}}" enctype="multipart/form-data">
                     @csrf
                       <label for="title">タイトル</label>
                       <br>

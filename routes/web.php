@@ -23,4 +23,5 @@ Route::get('/', 'PostController@index')->name('posts.index');
 
 Route::group(['prefix' => 'posts', 'middleware' => 'auth'], function(){
     Route::get('create', 'PostController@create')->name('posts.create');
+    Route::post('store', 'PostController@store')->name('posts.store');
 });
