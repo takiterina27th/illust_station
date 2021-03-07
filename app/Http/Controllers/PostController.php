@@ -25,6 +25,7 @@ class PostController extends Controller
         ->paginate(12);
         if($search !== null){
             $search_split = mb_convert_kana($search,'s');
+            $search_split2 = preg_split('/[\s]+/', $search_split,-1,PREG_SPLIT_NO_EMPTY);
         }
 
         $user = Auth::user();
