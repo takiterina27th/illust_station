@@ -20,9 +20,6 @@ class PostController extends Controller
 
         $query = Post::query();
 
-        $posts = $query->select('id', 'title', 'content', 'user_id', 'created_at')
-        ->orderBy('created_at', 'desc')
-        ->paginate(12);
         if($search !== null){
             $search_split = mb_convert_kana($search,'s');
             $search_split2 = preg_split('/[\s]+/', $search_split,-1,PREG_SPLIT_NO_EMPTY);
@@ -30,6 +27,10 @@ class PostController extends Controller
                 $query->where('title','like','%'.$value.'%');
             }
         }
+
+        $query->select('id', 'title', 'content', 'user_id', 'created_at');
+        $query->orderBy('created_at', 'desc')->get();
+        $posts = $query->paginate(12);
 
         $user = Auth::user();
 
