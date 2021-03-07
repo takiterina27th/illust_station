@@ -16,6 +16,8 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
+        $search = $request->input('search');
+
         $query = Post::query();
 
         $posts = $query->select('id', 'title', 'content', 'user_id', 'created_at')
