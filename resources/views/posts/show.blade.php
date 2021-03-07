@@ -37,7 +37,7 @@
                           <input class="btn btn-primary" type="submit" value="変更する">
                         </a>
                         <div class="ml-3">
-                          <form method="" action="" id="">
+                          <form method="POST" action="{{ route('posts.destroy', ['id' => $post->id])}}" id="">
                             @csrf
                             <a href="#" class="btn btn-danger" data-id="" onclick="deletePost(this); ">削除する</a>
                           </form>
