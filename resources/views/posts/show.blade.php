@@ -37,9 +37,9 @@
                           <input class="btn btn-primary" type="submit" value="変更する">
                         </a>
                         <div class="ml-3">
-                          <form method="POST" action="{{ route('posts.destroy', ['id' => $post->id])}}" id="">
+                          <form method="POST" action="{{ route('posts.destroy', ['id' => $post->id])}}" id="delete_{{ $post->id}}">
                             @csrf
-                            <a href="#" class="btn btn-danger" data-id="" onclick="deletePost(this); ">削除する</a>
+                            <a href="#" class="btn btn-danger" data-id="{{ $post->id }}" onclick="deletePost(this); ">削除する</a>
                           </form>
                         </div>
                       </div>
@@ -50,5 +50,14 @@
         </div>
     </div>
 </div>
+
+<script>
+function deletePost(e) {
+  'use strict';
+  if (confirm('本当に削除してもいいですか？')) {
+    document.getElementById('delete_' + e.dataset.id). submit();
+  }
+}
+</script>
 
 @endsection
