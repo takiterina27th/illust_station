@@ -1,0 +1,48 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    <div class="alert alert-primary" role="alert">
+                      <span>タイトル：</span>
+                      タイトル
+                    </div>
+                    <div class="mb-3">
+                        <img src="/storage/no-image.png" class="img-responsive d-block mx-auto" style="max-width: 100%; height: auto; width /***/:auto;">
+                    </div>
+                    
+                    <div class="border-bottom pb-2">内容</div>
+                    <div class="border-bottom pt-2 pb-2">
+                    
+                    <span class="ml-3">投稿日：：</span>00/00/00
+                    </div>
+                      <div class="d-flex">
+                        <a href="">
+                          <br>
+                          <input class="btn btn-primary" type="submit" value="変更する">
+                        </a>
+                        <div class="ml-3">
+                          <form method="" action="" id="">
+                            @csrf
+                            <br>
+                            <a href="#" class="btn btn-danger" data-id="" onclick="deletePost(this); ">削除する</a>
+                          </form>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endsection

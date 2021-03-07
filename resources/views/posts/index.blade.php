@@ -37,8 +37,9 @@
                       @foreach($posts as $post)
                       <div class="col mb-4">
                         <div class="card h-100">
-                          <img class="card-img-top" src="/storage/no-image.png" >
-                          
+                          <a href="{{ route('posts.show', ['id' => $post->id]) }}">
+                            <img class="card-img-top" src="/storage/no-image.png" >
+                          </a>
                           <div class="card-body">
                             <h5 class="card-title">{{ Str::limit($post->title, 20, '(…)' )}}</h5>
                             <p class="card-text">{{ Str::limit($post->content, 60, '(…)' )}}</p>
