@@ -21,7 +21,8 @@
                         <img src="/storage/no-image.png" class="img-responsive d-block mx-auto" style="max-width: 100%; height: auto; width /***/:auto;">
                     </div>
                     
-                    <div class="border-bottom pb-2">{{ $post->content}}</div>
+                    <div class="border-bottom pb-2">
+                    <span class="ml-3" >{{ $post->user->name}}：：</span>{{ $post->content}}</div>
                     <div class="border-bottom pt-2 pb-2">
                     
                     <span class="ml-3">投稿日：：</span>{{ $post->created_at}}
