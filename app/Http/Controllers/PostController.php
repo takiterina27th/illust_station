@@ -23,6 +23,8 @@ class PostController extends Controller
         $posts = $query->select('id', 'title', 'content', 'user_id', 'created_at')
         ->orderBy('created_at', 'desc')
         ->paginate(12);
+        if($search !== null){
+        }
 
         $user = Auth::user();
 
