@@ -108,5 +108,7 @@ class PostController extends Controller
     {
         $post = Post::find($id);
         $post->delete();
+
+        return redirect('/');
     }
 }
