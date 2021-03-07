@@ -51,7 +51,7 @@
                       </div>
                       @endforeach
                     </div>
-                  {{ $posts->links() }}
+                  {{ $posts->appends(request()->input())->links() }}
                 </div>
             </div>
         </div>
