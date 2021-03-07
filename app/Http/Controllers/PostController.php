@@ -18,7 +18,9 @@ class PostController extends Controller
     {
         $query = Post::query();
 
-        $posts = $query->select('id', 'title', 'content', 'user_id', 'created_at')->get();
+        $posts = $query->select('id', 'title', 'content', 'user_id', 'created_at')
+        ->orderBy('created_at', 'desc')
+        ->paginate(12);
 
         $user = Auth::user();
 
