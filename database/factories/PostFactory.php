@@ -5,7 +5,7 @@
 use App\Models\Post;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(Post::class, function (Faker $faker) {
     return [
         'title' => $faker->realText(50),
         'content' => $faker->realText(200),
