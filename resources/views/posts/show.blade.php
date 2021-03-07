@@ -15,16 +15,16 @@
 
                     <div class="alert alert-primary" role="alert">
                       <span>タイトル：</span>
-                      タイトル
+                      {{ $post->title}}
                     </div>
                     <div class="mb-3">
                         <img src="/storage/no-image.png" class="img-responsive d-block mx-auto" style="max-width: 100%; height: auto; width /***/:auto;">
                     </div>
                     
-                    <div class="border-bottom pb-2">内容</div>
+                    <div class="border-bottom pb-2">{{ $post->content}}</div>
                     <div class="border-bottom pt-2 pb-2">
                     
-                    <span class="ml-3">投稿日：：</span>00/00/00
+                    <span class="ml-3">投稿日：：</span>{{ $post->created_at}}
                     </div>
                       <div class="d-flex">
                         <a href="">
