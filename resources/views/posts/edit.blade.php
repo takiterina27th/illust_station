@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <form method="" action="">
+                    <form method="POST" action="{{ route('posts.update', ['id' => $post->id ])}}">
                     @csrf
 
                     <label for="title">タイトル</label>
