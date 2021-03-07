@@ -26,6 +26,9 @@ class PostController extends Controller
         if($search !== null){
             $search_split = mb_convert_kana($search,'s');
             $search_split2 = preg_split('/[\s]+/', $search_split,-1,PREG_SPLIT_NO_EMPTY);
+            foreach($search_split2 as $value){
+                $query->where('title','like','%'.$value.'%');
+            }
         }
 
         $user = Auth::user();
