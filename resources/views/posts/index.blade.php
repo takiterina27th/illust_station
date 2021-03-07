@@ -23,7 +23,7 @@
                     @endauth
 
                     <form method="GET" action="{{ route('posts.index') }}" class="d-flex">
-                      <input class="form-control me-2" name="search" type="search" placeholder="検索する" aria-label="Search">
+                      <input class="form-control me-2" name="search" type="search" placeholder="検索する" aria-label="Search" value="{{request('search')}}">
                       <button class="btn btn-outline-success" type="submit" style="margin-left: 12px;">Search</button>
                     </form>
                     </div>
