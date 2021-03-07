@@ -27,4 +27,5 @@ Route::group(['prefix' => 'posts', 'middleware' => 'auth'], function(){
     Route::post('store', 'PostController@store')->name('posts.store');
     Route::get('edit/{id}', 'PostController@edit')->name('posts.edit');
     Route::post('update/{id}', 'PostController@update')->name('posts.update');
+    Route::post('destroy/{id}', 'PostController@destroy')->name('posts.destroy');
 });
