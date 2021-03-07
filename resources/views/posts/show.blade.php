@@ -26,6 +26,11 @@
                     
                     <span class="ml-3">投稿日：：</span>{{ $post->created_at}}
                     </div>
+
+                    {{-- 現在ログインしているユーザーの投稿であれば表示する --}}
+
+                    @auth
+                    　@if(($post->user_id) === (Auth::user()->id ))
                       <div class="d-flex">
                         <a href="">
                           <br>
@@ -39,6 +44,8 @@
                           </form>
                         </div>
                       </div>
+                      @endif
+                    @endauth
                 </div>
             </div>
         </div>
