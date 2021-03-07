@@ -24,6 +24,7 @@ class PostController extends Controller
         ->orderBy('created_at', 'desc')
         ->paginate(12);
         if($search !== null){
+            $search_split = mb_convert_kana($search,'s');
         }
 
         $user = Auth::user();
