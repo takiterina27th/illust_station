@@ -14,16 +14,16 @@
                         </div>
                     @endif
 
-                    <form method="" action="">
+                    <form method="POST" action="{{ route('posts.update', ['id' => $post->id ])}}">
                     @csrf
 
                     <label for="title">タイトル</label>
                     <br>
-                    <input type="text" name="title" id="title" value="">
+                    <input type="text" name="title" id="title" value="{{$post->title}}">
                     <br>
                     <label for="content">内容</label>
                     <br>
-                    <textarea name="content" id="content" cols="50" rows="5"></textarea>
+                    <textarea name="content" id="content" cols="50" rows="5">{{$post->content}}</textarea>
                     <br>
                     <input class="btn btn-info" type="submit" value="登録する">
                     

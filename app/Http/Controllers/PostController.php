@@ -74,7 +74,8 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        return view('posts.edit');
+        $post = Post::find($id);
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -86,7 +87,15 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::find($id);
+
+        $post->title = $request->input('title');
+        $post->content = $request->input('content');
+        $post->user_id = Auth::user()->id;
+
+        $post->save();
+
+        return redirect('/');
     }
 
     /**
