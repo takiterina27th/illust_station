@@ -38,7 +38,11 @@
                       <div class="col mb-4">
                         <div class="card h-100">
                           <a href="{{ route('posts.show', ['id' => $post->id]) }}">
+                          @if($post->image == null)
                             <img class="card-img-top" src="/storage/no-image.png" >
+                          @else
+                            <img class="card-img-top" src="/storage/{{$post->image}}" >
+                          @endif
                           </a>
                           <div class="card-body">
                             <h5 class="card-title">{{ Str::limit($post->title, 20, '(…)' )}}</h5>

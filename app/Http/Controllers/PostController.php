@@ -28,7 +28,7 @@ class PostController extends Controller
             }
         }
 
-        $query->select('id', 'title', 'content', 'user_id', 'created_at');
+        $query->select('id', 'title', 'content', 'image', 'user_id', 'created_at');
         $query->orderBy('created_at', 'desc')->get();
         $posts = $query->paginate(12);
 
@@ -57,8 +57,17 @@ class PostController extends Controller
     {
         $post = new Post;
 
+        $originalImg = $request->image;
+        if ($originalImg->isValid()) {
+            $filePath = $originalImg->store('public');
+            $image = str_replace('public/', '', $filePath);
+        } else {
+            $image = "";
+        }
+
         $post->title = $request->input('title');
         $post->content = $request->input('content');
+        $post->image = $image;
         $post->user_id = Auth::user()->id;
 
         $post->save();

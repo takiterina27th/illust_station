@@ -24,6 +24,7 @@
                     </div>
                     @endif
                
+                    {{-- enctype="multipart/form-data"はファイルをアップロードする際に必ず必要 --}}
                     <form method="POST" action="{{route('posts.store')}}" enctype="multipart/form-data">
                     @csrf
                       <label for="title">タイトル</label>
