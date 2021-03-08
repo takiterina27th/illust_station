@@ -28,7 +28,7 @@ class PostController extends Controller
             }
         }
 
-        $query->select('id', 'title', 'content', 'user_id', 'created_at');
+        $query->select('id', 'title', 'content', 'image', 'user_id', 'created_at');
         $query->orderBy('created_at', 'desc')->get();
         $posts = $query->paginate(12);
 
