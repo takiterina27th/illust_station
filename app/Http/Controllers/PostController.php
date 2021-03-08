@@ -57,8 +57,17 @@ class PostController extends Controller
     {
         $post = new Post;
 
+        $originalImg = $request->image;
+        if ($originalImg->isValid()) {
+            $filePath = $originalImg->store('public');
+            $image = str_replace('public/', '', $filePath);
+        } else {
+            $image = "";
+        }
+
         $post->title = $request->input('title');
         $post->content = $request->input('content');
+        $post->image = $image;
         $post->user_id = Auth::user()->id;
 
         $post->save();
