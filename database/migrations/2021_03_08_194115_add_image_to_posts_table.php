@@ -14,7 +14,7 @@ class AddImageToPostsTable extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            //
+            $table->string('image')->after('content');
         });
     }
 
@@ -26,7 +26,7 @@ class AddImageToPostsTable extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            //
+            $table->dropColumn('image'); 
         });
     }
 }
