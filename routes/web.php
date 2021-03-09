@@ -29,3 +29,12 @@ Route::group(['prefix' => 'posts', 'middleware' => 'auth'], function(){
     Route::post('update/{id}', 'PostController@update')->name('posts.update');
     Route::post('destroy/{id}', 'PostController@destroy')->name('posts.destroy');
 });
+
+Route::group(['middleware' => 'auth'], function()
+{  
+  Route::get('show/{id}', 'UserController@show')->name('users.show');
+  Route::post('store', 'UserController@store')->name('users.store');
+  Route::get('edit/{id}', 'UserController@edit')->name('users.edit');
+  Route::post('update/{id}', 'UserController@update')->name('users.update');
+  Route::post('destroy/{id}', 'UserController@destroy')->name('users.destroy');
+});
