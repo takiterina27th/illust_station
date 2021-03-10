@@ -14,7 +14,7 @@
             </div>
             <div class="form-group">
                 <span>メールアドレス：</span>
-                <span>メールアドレス</span>
+                <span>{{ $user->email }}</span>
             </div>
               <div>
                 <a href="">
