@@ -21,7 +21,7 @@
                   <button class="btn btn-primary">ユーザー登録内容の編集する</button>
                 </a>
               </div>
-                <form method="" action="" id="">
+                <form method="POST" action="{{ route('users.destroy', [$user->id])}}" id="">
                   @csrf
                   <br>
                   <a href="#" class="btn btn-danger" data-id="">アカウントを削除する</a>
