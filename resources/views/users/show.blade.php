@@ -10,14 +10,14 @@
         <div class="card-body">
             <div class="form-group">
                 <span>名前：</span>
-                <span>ユーザーネーム</span>
+                <span>{{ $user->name }}</span>
             </div>
             <div class="form-group">
                 <span>メールアドレス：</span>
-                <span>メールアドレス</span>
+                <span>{{ $user->email }}</span>
             </div>
               <div>
-                <a href="">
+                <a href="{{ route('users.edit', [$user->id])}}">
                   <button class="btn btn-primary">ユーザー登録内容の編集する</button>
                 </a>
               </div>
