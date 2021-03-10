@@ -8,14 +8,15 @@
       <div class="card">
         <div class="card-header">ユーザー登録内容の変更</div>
         <div class="card-body">
-          <form method="" action="">
+          <form method="POST" action="{{ route('users.update', [$user->id ]) }}">
+          {{-- @method=('PATCH'); --}}
           @csrf
             <div class="form-group">
               <label for="name">
                 名前
               </label>
               <div>
-                <input type="text" name="name" class="form-control" value="">
+                <input type="text" name="name" class="form-control" value="{{ $user->name }}">
               </div>
             </div>
             <div class="form-group">
@@ -23,7 +24,7 @@
                 email
               </label>
               <div>
-                <input type="text" name="email" class="form-control" value="">
+                <input type="text" name="email" class="form-control" value="{{ $user->email }}">
               </div>
               <button type="submit" class="btn btn-primary mt-5">変更する</button>
           </form>
