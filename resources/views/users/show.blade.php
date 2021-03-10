@@ -21,15 +21,24 @@
                   <button class="btn btn-primary">ユーザー登録内容の編集する</button>
                 </a>
               </div>
-                <form method="" action="" id="">
+                <form method="POST" action="{{ route('users.destroy', [$user->id])}}" id="delete_{{ $user->id}}">
                   @csrf
                   <br>
-                  <a href="#" class="btn btn-danger" data-id="">アカウントを削除する</a>
+                  <a href="#" class="btn btn-danger" data-id="{{ $user->id }}" onclick="deletePost(this); ">アカウントを削除する</a>
                 </form>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+function deletePost(e) {
+  'use strict';
+  if (confirm('本当に削除してもいいですか？')) {
+    document.getElementById('delete_' + e.dataset.id). submit();
+  }
+}
+</script>
 
 @endsection
