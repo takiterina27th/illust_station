@@ -10,7 +10,7 @@
         <div class="card-body">
             <div class="form-group">
                 <span>名前：</span>
-                <span>ユーザーネーム</span>
+                <span>{{ $user->name }}</span>
             </div>
             <div class="form-group">
                 <span>メールアドレス：</span>
