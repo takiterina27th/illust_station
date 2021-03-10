@@ -17,7 +17,7 @@
                 <span>{{ $user->email }}</span>
             </div>
               <div>
-                <a href="">
+                <a href="{{ route('users.edit', [$user->id])}}">
                   <button class="btn btn-primary">ユーザー登録内容の編集する</button>
                 </a>
               </div>
