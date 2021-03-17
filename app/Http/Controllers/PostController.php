@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StorePost;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -57,17 +58,16 @@ class PostController extends Controller
     {
         $post = new Post;
 
-        $originalImg = $request->image;
-        if ($originalImg->isValid()) {
-            $filePath = $originalImg->store('public');
-            $image = str_replace('public/', '', $filePath);
+        $uploadImg = $request->file('image');
+        if ($uploadImg->isValid()) {
+        $path = Storage::disk('s3')->putFile('/', $uploadImg, 'public');
+        $post->image = Storage::disk('s3')->url($path);
         } else {
-            $image = "";
+            $post->image = "";
         }
 
         $post->title = $request->input('title');
         $post->content = $request->input('content');
-        $post->image = $image;
         $post->user_id = Auth::user()->id;
 
         $post->save();
