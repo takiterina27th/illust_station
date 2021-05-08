@@ -16,15 +16,13 @@
                     <div class="container-fluid">
                     @auth
                     <a href="{{ route('posts.create') }}">
-                      <button type="submit" class="btn btn-primary">
-                      投稿する
-                      </button>
+                        <button type="button" class="btn font-weight-bold" style="color: #f8f9fa; background-color: #295d72;">投稿する</button>
                     </a>
                     @endauth
 
                     <form method="GET" action="{{ route('posts.index') }}" class="d-flex">
                       <input class="form-control me-2" name="search" type="search" placeholder="検索する" aria-label="Search" value="{{request('search')}}">
-                      <button class="btn btn-outline-success" type="submit" style="margin-left: 12px;">Search</button>
+                      <button class="btn btn-outline-info" type="submit" style="margin-left: 12px;">Search</button>
                     </form>
                     </div>
                     </nav>
