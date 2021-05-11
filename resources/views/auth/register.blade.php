@@ -63,7 +63,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn font-weight-bold" style="color: #f8f9fa; background-color: #295d72;">
                                     {{ __('登録する') }}
                                 </button>
                             </div>
