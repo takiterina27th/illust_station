@@ -35,7 +35,7 @@
                     <br>
                     <textarea name="content" id="content" cols="50" rows="5">{{$post->content}}</textarea>
                     <br>
-                    <input class="btn btn-info" type="submit" value="登録する">
+                    <input class="btn btn-primary" type="submit" value="登録する">
                     
                     </form>
                 </div>

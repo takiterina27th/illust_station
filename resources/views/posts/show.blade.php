@@ -13,7 +13,7 @@
                         </div>
                     @endif
 
-                    <div class="alert alert-primary" role="alert">
+                    <div class="alert alert-info font-weight-bold" role="alert">
                       <span>タイトル：</span>
                       {{ $post->title}}
                     </div>
@@ -43,7 +43,7 @@
                         <div class="ml-3">
                           <form method="POST" action="{{ route('posts.destroy', ['id' => $post->id])}}" id="delete_{{ $post->id}}">
                             @csrf
-                            <a href="#" class="btn btn-danger" data-id="{{ $post->id }}" onclick="deletePost(this); ">削除する</a>
+                            <a href="#" class="btn btn-outline-danger" data-id="{{ $post->id }}" onclick="deletePost(this); ">削除する</a>
                           </form>
                         </div>
                       </div>
