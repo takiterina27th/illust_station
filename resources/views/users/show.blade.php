@@ -24,7 +24,7 @@
                 <form method="POST" action="{{ route('users.destroy', [$user->id])}}" id="delete_{{ $user->id}}">
                   @csrf
                   <br>
-                  <a href="#" class="btn btn-danger" data-id="{{ $user->id }}" onclick="deletePost(this); ">アカウントを削除する</a>
+                  <a href="#" class="btn btn-outline-danger" data-id="{{ $user->id }}" onclick="deletePost(this); ">アカウントを削除する</a>
                 </form>
         </div>
       </div>
