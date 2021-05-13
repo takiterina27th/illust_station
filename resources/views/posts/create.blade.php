@@ -37,7 +37,7 @@
                       <br>
                       <input type="file" name="image">
                       <br>
-                      <input class="btn btn-info mt-2" type="submit" value="登録する">
+                      <input class="btn font-weight-bold mt-2" style="color: #f8f9fa; background-color: #295d72;" type="submit" value="投稿する">
                     </form>
                 </div>
             </div>
