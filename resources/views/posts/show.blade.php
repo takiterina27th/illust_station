@@ -13,7 +13,7 @@
                         </div>
                     @endif
 
-                    <div class="alert alert-primary" role="alert">
+                    <div class="alert alert-info font-weight-bold" role="alert">
                       <span>タイトル：</span>
                       {{ $post->title}}
                     </div>
