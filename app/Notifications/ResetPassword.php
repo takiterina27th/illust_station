@@ -49,7 +49,6 @@ class ResetPassword extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->from('admin@example.com', config('app.name'))
             ->subject('パスワード再設定')
             ->greeting('平素よりイラステをご利用いただきありがとうございます')
             ->line('下のボタンをクリックしてパスワードを再設定してください。')
