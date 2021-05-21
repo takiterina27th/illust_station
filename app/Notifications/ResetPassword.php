@@ -12,13 +12,21 @@ class ResetPassword extends Notification
     use Queueable;
 
     /**
+    * The password reset token.
+    * 
+    * @var string
+    */
++   public $token;
+
+    /**
      * Create a new notification instance.
      *
+     * @param string $token
      * @return void
      */
-    public function __construct()
+    public function __construct($token)
     {
-        //
+        $this->token = $token;
     }
 
     /**
@@ -41,9 +49,12 @@ class ResetPassword extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+            ->from('admin@example.com', config('app.name'))
+            ->subject('パスワード再設定')
+            ->greeting('平素よりアプリをご利用いただきありがとうございます')
+            ->line('下のボタンをクリックしてパスワードを再設定してください。')
+            ->action(__('パスワードを再設定'), url(config('app.url').route('password.reset', $this->token, false)))
+            ->line('もしこのメールに心当たりがない場合は、そのまま削除してください。');
     }
 
     /**
