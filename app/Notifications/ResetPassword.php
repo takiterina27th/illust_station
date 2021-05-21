@@ -16,7 +16,7 @@ class ResetPassword extends Notification
     * 
     * @var string
     */
-+   public $token;
+    public $token;
 
     /**
      * Create a new notification instance.
