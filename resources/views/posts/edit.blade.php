@@ -24,7 +24,7 @@
                     </div>
                     @endif
 
-                    <form method="POST" action="{{ route('posts.update', ['id' => $post->id ])}}">
+                    <form method="POST" action="{{ route('posts.update', ['id' => $post->id ])}}" enctype="multipart/form-data">
                     @csrf
 
                     <label for="title">タイトル</label>
@@ -38,7 +38,7 @@
                     <div class="form-design">
                         <label for="form-image" class="form-design__label">ファイルを選択</label>
                         <input type="file" name="image" id="form-image">
-                        <span>選択されていません</span>
+                        <span class="select-image">選択されていません</span>
                     </div>
                     <input class="btn btn-primary mt-2" type="submit" value="登録する">
                     
