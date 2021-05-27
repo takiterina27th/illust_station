@@ -35,8 +35,11 @@
                       <br>
                       <textarea name="content" id="content" cols="50" rows="5"></textarea>
                       <br>
-                      <input type="file" name="image">
-                      <br>
+                      <div class="form-design">
+                          <label for="form-image" class="form-design__label">ファイルを選択</label>
+                          <input type="file" name="image" id="form-image">
+                          <span class="select-image">選択されていません</span>
+                      </div>
                       <input class="btn font-weight-bold mt-2" style="color: #f8f9fa; background-color: #295d72;" type="submit" value="投稿する">
                     </form>
                 </div>
