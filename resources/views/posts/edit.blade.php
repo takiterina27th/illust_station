@@ -36,7 +36,7 @@
                     <textarea name="content" id="content" cols="50" rows="5">{{$post->content}}</textarea>
                     <br>
                     <div class="form-design">
-                        <label for="form-image">ファイルを選択</label>
+                        <label for="form-image" class="form-design__label">ファイルを選択</label>
                         <input type="file" name="image" id="form-image">
                         <span>選択されていません</span>
                     </div>

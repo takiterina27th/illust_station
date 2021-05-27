@@ -10944,12 +10944,17 @@ a.text-dark:focus {
   }
 }
 
-.form-design label {
+.form-design__label {
   padding: 5px 20px;
   color: #ffffff;
   background-color: #295d72;
   cursor: pointer;
   border-radius: 10px;
+  transition: 0.3s;
+}
+
+.form-design__label:hover {
+  opacity: 0.8;
 }
 
 .form-design input[type=file] {
