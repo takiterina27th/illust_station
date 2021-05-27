@@ -111,6 +111,14 @@ class PostController extends Controller
     {
         $post = Post::find($id);
 
+        $uploadImg = $request->file('image');
+        if ($uploadImg->isValid()) {
+        $path = Storage::disk('s3')->putFile('/', $uploadImg, 'public');
+        $post->image = Storage::disk('s3')->url($path);
+        } else {
+            $post->image = "";
+        }
+
         $post->title = $request->input('title');
         $post->content = $request->input('content');
         $post->user_id = Auth::user()->id;
