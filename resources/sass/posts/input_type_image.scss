@@ -1,0 +1,12 @@
+.form-design {
+  label {
+    padding: 5px 20px;
+    color: #ffffff;
+    background-color: #295d72;
+    cursor: pointer;
+    border-radius:10px;
+  }
+  input[type="file"] {
+    display: none;
+  }
+}

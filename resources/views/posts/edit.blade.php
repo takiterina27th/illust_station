@@ -35,9 +35,12 @@
                     <br>
                     <textarea name="content" id="content" cols="50" rows="5">{{$post->content}}</textarea>
                     <br>
-                    <input type="file" name="image">
-                    <br>
-                    <input class="btn btn-primary" type="submit" value="登録する">
+                    <div class="form-design">
+                        <label for="form-image">ファイルを選択</label>
+                        <input type="file" name="image" id="form-image">
+                        <span>選択されていません</span>
+                    </div>
+                    <input class="btn btn-primary mt-2" type="submit" value="登録する">
                     
                     </form>
                 </div>
