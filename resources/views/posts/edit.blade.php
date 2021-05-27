@@ -35,6 +35,8 @@
                     <br>
                     <textarea name="content" id="content" cols="50" rows="5">{{$post->content}}</textarea>
                     <br>
+                    <input type="file" name="image">
+                    <br>
                     <input class="btn btn-primary" type="submit" value="登録する">
                     
                     </form>
