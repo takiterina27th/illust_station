@@ -31,7 +31,7 @@
                     <br>
                     <input type="text" name="title" id="title" value="{{$post->title}}">
                     <br>
-                    <label for="content">内容</label>
+                    <label for="content" class="mt-2">内容</label>
                     <br>
                     <textarea name="content" id="content" cols="50" rows="5">{{$post->content}}</textarea>
                     <br>
