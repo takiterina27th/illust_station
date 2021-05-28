@@ -40,7 +40,7 @@
                         <input type="file" name="image" id="form-image">
                         <span class="select-image">選択されていません</span>
                     </div>
-                    <input class="btn btn-primary mt-2" type="submit" value="登録する">
+                    <input class="btn font-weight-bold mt-2 button-design" type="submit" value="登録する">
                     
                     </form>
                 </div>
