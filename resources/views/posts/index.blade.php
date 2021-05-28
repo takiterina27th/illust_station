@@ -16,7 +16,7 @@
                     <div class="container-fluid">
                     @auth
                     <a href="{{ route('posts.create') }}">
-                        <button type="button" class="btn font-weight-bold" style="color: #f8f9fa; background-color: #295d72;">投稿する</button>
+                        <button type="button" class="btn font-weight-bold button-design">投稿する</button>
                     </a>
                     @endauth
 

@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">情報を編集しよう！</div>
+                <div class="card-header font-weight-bold">編集しよう！</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -31,7 +31,7 @@
                     <br>
                     <input type="text" name="title" id="title" value="{{$post->title}}">
                     <br>
-                    <label for="content">内容</label>
+                    <label for="content" class="mt-2">内容</label>
                     <br>
                     <textarea name="content" id="content" cols="50" rows="5">{{$post->content}}</textarea>
                     <br>
@@ -40,7 +40,7 @@
                         <input type="file" name="image" id="form-image">
                         <span class="select-image">選択されていません</span>
                     </div>
-                    <input class="btn btn-primary mt-2" type="submit" value="登録する">
+                    <input class="btn font-weight-bold mt-2 button-design" type="submit" value="登録する">
                     
                     </form>
                 </div>

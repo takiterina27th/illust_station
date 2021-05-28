@@ -10961,3 +10961,14 @@ a.text-dark:focus {
   display: none;
 }
 
+.button-design {
+  color: #f8f9fa;
+  background-color: #295d72;
+  transition: 0.3s;
+}
+
+.button-design:hover {
+  opacity: 0.8;
+  color: #f8f9fa;
+}
+
