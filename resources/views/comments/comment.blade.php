@@ -5,7 +5,7 @@
             <span class="comment__body-time">{{ $comment->created_at }}</span>
         </div>
         <span class="comment__body-content">
-            {{ $comment->comment }}
+            {!! nl2br(e($comment->comment)) !!}
         </span>
     </div>
 </div>
