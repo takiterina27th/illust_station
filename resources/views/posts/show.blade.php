@@ -53,7 +53,9 @@
                                 <div class="font-weight-bold text-center">
                                     この投稿へのコメント
                                 </div>
-                                @include('comments.comment')
+                                @foreach ($post->comment as $comment)
+                                    @include('comments.comment')
+                                @endforeach
                             </div>
                             <form method="POST" action="{{route('comments.store')}}">
                                 @csrf
