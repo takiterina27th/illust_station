@@ -48,11 +48,10 @@
                                 </div>
                             </div>
                         @endif
-                        <div class="comment row justify-content-center mt-3">
+                        <div class="comment justify-content-center mt-3">
                             <div class="comment__area">
-                                <div class="font-weight-bold">
+                                <div class="font-weight-bold text-center">
                                     この投稿へのコメント
-                                </div>
                                 </div>
                             </div>
                             <div class="comment__submit-area mt-3">
