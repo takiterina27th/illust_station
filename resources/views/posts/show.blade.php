@@ -36,7 +36,7 @@
 
                     @auth
                         @if(($post->user_id) === (Auth::user()->id ))
-                            <div class="d-flex">
+                            <div class="d-flex mt-3">
                                 <a href="{{ route('posts.edit', ['id' => $post->id])}}">
                                     <input class="btn btn-primary" type="submit" value="変更する">
                                 </a>
