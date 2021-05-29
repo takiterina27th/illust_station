@@ -53,6 +53,7 @@
                                 <div class="font-weight-bold text-center">
                                     この投稿へのコメント
                                 </div>
+                                @include('comments.comment')
                             </div>
                             <div class="comment__submit-area mt-3">
                                 <textarea class="form-control comment__textarea" placeholder="テキストを入力" aria-label="With textarea"></textarea>

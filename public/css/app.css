@@ -10977,3 +10977,23 @@ a.text-dark:focus {
   margin: 10px 0 0 auto;
 }
 
+.comment__body {
+  padding: 5px 30px 20px 30px;
+}
+
+.comment__body:hover {
+  background-color: #dfdfdf;
+}
+
+.comment__body-user {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.comment__body-time {
+  font-size: 10px;
+  margin-top: 10px;
+  margin-left: 5px;
+  color: #a0a0a0;
+}
+
