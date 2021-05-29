@@ -10972,3 +10972,8 @@ a.text-dark:focus {
   color: #f8f9fa;
 }
 
+.comment__button {
+  display: block;
+  margin: 10px 0 0 auto;
+}
+

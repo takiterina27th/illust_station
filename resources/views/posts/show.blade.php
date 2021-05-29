@@ -48,6 +48,18 @@
                                 </div>
                             </div>
                         @endif
+                        <div class="comment row justify-content-center mt-3">
+                            <div class="comment__area">
+                                <div class="font-weight-bold">
+                                    この投稿へのコメント
+                                </div>
+                                </div>
+                            </div>
+                            <div class="comment__submit-area mt-3">
+                                <textarea class="form-control comment__textarea" placeholder="テキストを入力" aria-label="With textarea"></textarea>
+                                <button type="input-group-prepend button" class="btn btn-outline-primary comment__button">コメントする</button>
+                            </div>
+                        </div>
                     @endauth
                 </div>
             </div>
