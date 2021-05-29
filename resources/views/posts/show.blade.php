@@ -35,19 +35,19 @@
                     {{-- 現在ログインしているユーザーの投稿であれば表示する --}}
 
                     @auth
-                    　@if(($post->user_id) === (Auth::user()->id ))
-                      <div class="d-flex">
-                        <a href="{{ route('posts.edit', ['id' => $post->id])}}">
-                          <input class="btn btn-primary" type="submit" value="変更する">
-                        </a>
-                        <div class="ml-3">
-                          <form method="POST" action="{{ route('posts.destroy', ['id' => $post->id])}}" id="delete_{{ $post->id}}">
-                            @csrf
-                            <a href="#" class="btn btn-outline-danger" data-id="{{ $post->id }}" onclick="deletePost(this); ">削除する</a>
-                          </form>
-                        </div>
-                      </div>
-                      @endif
+                        @if(($post->user_id) === (Auth::user()->id ))
+                            <div class="d-flex">
+                                <a href="{{ route('posts.edit', ['id' => $post->id])}}">
+                                    <input class="btn btn-primary" type="submit" value="変更する">
+                                </a>
+                                <div class="ml-3">
+                                    <form method="POST" action="{{ route('posts.destroy', ['id' => $post->id])}}" id="delete_{{ $post->id}}">
+                                        @csrf
+                                        <a href="#" class="btn btn-outline-danger" data-id="{{ $post->id }}" onclick="deletePost(this); ">削除する</a>
+                                    </form>
+                                </div>
+                            </div>
+                        @endif
                     @endauth
                 </div>
             </div>
