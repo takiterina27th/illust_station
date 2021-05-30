@@ -10,7 +10,7 @@ use App\Http\Requests\CommentStore;
 
 class CommentController extends Controller
 {
-    public function store(Request $request)
+    public function store(CommentStore $request)
     {
         $user = Auth::user();
         $post_id = $request->input('post_id');
