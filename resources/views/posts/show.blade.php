@@ -57,6 +57,15 @@
                                     @include('comments.comment')
                                 @endforeach
                             </div>
+                            @if ($errors->any())
+                                <div class="alert alert-danger mt-3">
+                                    <ul class="mb-0">
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <form method="POST" action="{{route('comments.store')}}">
                                 @csrf
                                 <input type="hidden" name="post_id"  value="{{ $post->id }}">
