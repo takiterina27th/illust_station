@@ -40,3 +40,5 @@ Route::group(['middleware' => 'auth'], function(){
 
 Route::get('login/twitter', 'Auth\LoginController@redirectToTwitterProvider');
 Route::get('login/twitter/callback', 'Auth\LoginController@handleTwitterProviderCallback');
+
+Route::get('/policy', 'PolicyController@index')->name('policy');
