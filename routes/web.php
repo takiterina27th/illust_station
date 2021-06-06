@@ -37,3 +37,8 @@ Route::group(['middleware' => 'auth'], function(){
     Route::post('destroy/{id}', 'UserController@destroy')->name('users.destroy');
     Route::post('store', 'CommentController@store')->name('comments.store');
 });
+
+Route::get('login/twitter', 'Auth\LoginController@redirectToTwitterProvider');
+Route::get('login/twitter/callback', 'Auth\LoginController@handleTwitterProviderCallback');
+
+Route::get('/policy', 'PolicyController@index')->name('policy');

@@ -63,6 +63,11 @@
                                     </a>
                                 @endif
                             </div>
+                            <div class="col-md-8 offset-md-4 mt-3">
+                                <a href="/login/twitter">
+                                    <button type="button" class="btn font-weight-bold button-design">Twiiterログイン</button>
+                                </a>
+                            </div>
                         </div>
                     </form>
                 </div>
