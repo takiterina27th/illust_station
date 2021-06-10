@@ -10997,3 +10997,95 @@ a.text-dark:focus {
   color: #a0a0a0;
 }
 
+.login-form {
+  margin-top: 50px;
+  padding: 40px 0 38px;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.login-form__logo-box {
+  margin-bottom: 32px;
+}
+
+.login-form__logo {
+  margin-bottom: 6px;
+}
+
+.login-form__catchphrase {
+  color: #757c80;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.login-form__form-box {
+  margin: 0 15px;
+}
+
+.login-form__field {
+  border-radius: 4px 4px 0 0;
+}
+
+.login-form__input {
+  color: #757c80;
+}
+
+.login-form__reset-box {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-form__reset-link {
+  display: block;
+  margin-left: auto;
+  text-align: right;
+  font-size: 12px;
+}
+
+.login-form__social {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 16px;
+}
+
+.login-form__social-link:hover {
+  text-decoration: none;
+}
+
+.login-form__recaptcha-terms {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.32);
+  margin: 0 auto;
+  padding-top: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.auth-button {
+  display: block;
+  margin: 10px auto 5px;
+  height: 40px;
+  border-radius: 22px;
+  border-style: none;
+  color: #fff;
+  outline: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  transition: 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.auth-button:hover {
+  opacity: 0.8;
+  color: #f8f9fa;
+}
+

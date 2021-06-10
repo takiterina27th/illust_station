@@ -1,0 +1,21 @@
+.auth-button {
+  display: block;
+  margin: 10px auto 5px;
+  height: 40px;
+  border-radius: 22px;
+  border-style: none;
+  color: #fff;
+  outline: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  transition: .3s;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  &:hover {
+    opacity: 0.8;
+    color: #f8f9fa;
+  }
+}
