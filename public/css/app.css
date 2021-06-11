@@ -10997,7 +10997,7 @@ a.text-dark:focus {
   color: #a0a0a0;
 }
 
-.login-form {
+.auth-form {
   margin-top: 50px;
   padding: 40px 0 38px;
   background-color: rgba(255, 255, 255, 0.92);
@@ -11005,56 +11005,56 @@ a.text-dark:focus {
   text-align: center;
 }
 
-.login-form__logo-box {
+.auth-form__logo-box {
   margin-bottom: 32px;
 }
 
-.login-form__logo {
+.auth-form__logo {
   margin-bottom: 6px;
 }
 
-.login-form__catchphrase {
+.auth-form__catchphrase {
   color: #757c80;
   font-size: 12px;
   font-weight: 700;
 }
 
-.login-form__form-box {
+.auth-form__form-box {
   margin: 0 15px;
 }
 
-.login-form__field {
+.auth-form__field {
   border-radius: 4px 4px 0 0;
 }
 
-.login-form__input {
+.auth-form__input {
   color: #757c80;
 }
 
-.login-form__reset-box {
+.auth-form__reset-box {
   display: block;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
 }
 
-.login-form__reset-link {
+.auth-form__reset-link {
   display: block;
   margin-left: auto;
   text-align: right;
   font-size: 12px;
 }
 
-.login-form__social {
+.auth-form__social {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   padding-bottom: 16px;
 }
 
-.login-form__social-link:hover {
+.auth-form__social-link:hover {
   text-decoration: none;
 }
 
-.login-form__recaptcha-terms {
+.auth-form__recaptcha-terms {
   display: block;
   font-style: normal;
   font-weight: 400;
