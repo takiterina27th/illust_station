@@ -38,7 +38,7 @@
 
                         @if (Route::has('password.request'))
                             <div class="auth-form__reset-box">
-                                <a class="btn btn-link auth-form__reset-link" style="color: #295d72;" href="{{ route('password.request') }}">
+                                <a class="auth-form__reset-link" style="color: #295d72;" href="{{ route('password.request') }}">
                                     {{ __('パスワードがわからない') }}
                                 </a>
                             </div>
