@@ -34,7 +34,9 @@
 
                     <div class="mt-2">
                         @foreach($post->tag as $post_tag)
+                            <a href="{{ route('tags.show', ['id' => $post_tag->id]) }}">
                             <span class="ml-3">#{{$post_tag->name}}</span>
+                            </a>
                         @endforeach
                     </div>
 
