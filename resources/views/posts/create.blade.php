@@ -33,7 +33,7 @@
                       <br>
                       <label class="mt-2" for="tags">タグ</label>
                       <br>
-                      <input type="text" name="tags" id="tags">
+                      <input type="text" name="tags" id="tags" value="#">
                       <br>
                       <label class="mt-2" for="content">内容</label>
                       <br>
