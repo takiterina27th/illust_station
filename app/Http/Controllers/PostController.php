@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Tag;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StorePost;
 use Illuminate\Support\Facades\Storage;
@@ -66,11 +67,26 @@ class PostController extends Controller
             $post->image = "";
         }
 
+       preg_match_all('/#([a-zA-z0-9０-９ぁ-んァ-ヶ亜-熙]+)/u', $request->tags, $match);
+
+       $tags = [];
+       foreach($match[1] as $tag) {
+           $record = Tag::firstOrCreate(['name' => $tag]);
+           array_push($tags, $record);
+       }
+
+       $tags_id = [];
+       foreach($tags as $tag) {
+           array_push($tags_id, $tag->id);
+       }
+        
         $post->title = $request->input('title');
         $post->content = $request->input('content');
         $post->user_id = Auth::user()->id;
 
         $post->save();
+
+        $post->tag()->attach($tags_id);
 
         return redirect('/');
     }
