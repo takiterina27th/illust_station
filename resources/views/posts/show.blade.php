@@ -27,9 +27,17 @@
                     
                     <div class="border-bottom pb-2">
                     <span class="ml-3" >{{ $post->user->name}}：：</span>{{ $post->content}}</div>
+
                     <div class="border-bottom pt-2 pb-2">
-                    
                     <span class="ml-3">投稿日：：</span>{{ $post->created_at}}
+                    </div>
+
+                    <div class="mt-2">
+                        @foreach($post->tag as $post_tag)
+                            <a href="{{ route('tags.show', ['id' => $post_tag->id]) }}">
+                            <span class="ml-3">#{{$post_tag->name}}</span>
+                            </a>
+                        @endforeach
                     </div>
 
                     {{-- 現在ログインしているユーザーの投稿であれば表示する --}}

@@ -38,6 +38,8 @@ Route::group(['middleware' => 'auth'], function(){
     Route::post('store', 'CommentController@store')->name('comments.store');
 });
 
+Route::get('tags/show/{id}', 'TagController@show')->name('tags.show');
+
 Route::get('login/twitter', 'Auth\LoginController@redirectToTwitterProvider');
 Route::get('login/twitter/callback', 'Auth\LoginController@handleTwitterProviderCallback');
 

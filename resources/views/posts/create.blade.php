@@ -31,6 +31,10 @@
                       <br>
                       <input type="text" name="title" id="title">
                       <br>
+                      <label class="mt-2" for="tags">タグ</label>
+                      <br>
+                      <input type="text" name="tags" id="tags" value="#">
+                      <br>
                       <label class="mt-2" for="content">内容</label>
                       <br>
                       <textarea name="content" id="content" cols="50" rows="5"></textarea>
