@@ -67,7 +67,7 @@ class PostController extends Controller
             $post->image = "";
         }
 
-       preg_match_all('/#([a-zA-z0-9０-９ぁ-んァ-ヶ亜-熙]+)/u', $request->tags, $match);
+       preg_match_all('/#([a-zA-z0-9０-９ぁ-んァ-ヶ一-龠]+)/u', $request->tags, $match);
 
        $tags = [];
        foreach($match[1] as $tag) {
@@ -136,7 +136,7 @@ class PostController extends Controller
             $post->image = "";
         }
 
-        preg_match_all('/#([a-zA-z0-9０-９ぁ-んァ-ヶ亜-熙]+)/u', $request->tags, $match);
+        preg_match_all('/#([a-zA-z0-9０-９ぁ-んァ-ヶ一-龠]+)/u', $request->tags, $match);
 
         $before = [];
         foreach($post->tag as $tag){
