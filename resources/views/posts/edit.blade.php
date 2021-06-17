@@ -31,6 +31,10 @@
                     <br>
                     <input type="text" name="title" id="title" value="{{$post->title}}">
                     <br>
+                    <label class="mt-2" for="tags">タグ</label>
+                    <br>
+                    <input type="text" name="tags" id="tags" value="#">
+                    <br>
                     <label for="content" class="mt-2">内容</label>
                     <br>
                     <textarea name="content" id="content" cols="50" rows="5">{{$post->content}}</textarea>
