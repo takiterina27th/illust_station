@@ -33,7 +33,7 @@
                     <br>
                     <label class="mt-2" for="tags">タグ</label>
                     <br>
-                    <input type="text" name="tags" id="tags" value="#">
+                    <input type="text" name="tags" id="tags" value="@foreach($tags as $tag)#{{$tag->name}}@endforeach">
                     <br>
                     <label for="content" class="mt-2">内容</label>
                     <br>
