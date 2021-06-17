@@ -67,7 +67,7 @@ class PostController extends Controller
             $post->image = "";
         }
 
-       preg_match_all('/#([a-zA-z0-9０-９ぁ-んァ-ヶ亜-熙]+)/u', $request->tags, $match);
+       preg_match_all('/#([a-zA-z0-9０-９ぁ-んァ-ヶ一-龠]+)/u', $request->tags, $match);
 
        $tags = [];
        foreach($match[1] as $tag) {
@@ -113,7 +113,8 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
-        return view('posts.edit', compact('post'));
+        $tags = $post->tag;
+        return view('posts.edit', compact('post', 'tags'));
     }
 
     /**
@@ -134,6 +135,25 @@ class PostController extends Controller
         } else {
             $post->image = "";
         }
+
+        preg_match_all('/#([a-zA-z0-9０-９ぁ-んァ-ヶ一-龠]+)/u', $request->tags, $match);
+
+        $before = [];
+        foreach($post->tag as $tag){
+            array_push($before, $tag->name);
+        }
+        $after = [];
+        foreach($match[1] as $tag){
+            // 普通に新しいのが来たら新規作成する動き
+            $record = Tag::firstOrCreate(['name' => $tag]);
+            array_push($after, $record);
+        }
+
+        $tags_id = [];
+        foreach($after as $tag) {
+            array_push($tags_id, $tag->id);
+        }
+        $post->tag()->sync($tags_id);
 
         $post->title = $request->input('title');
         $post->content = $request->input('content');
