@@ -14,8 +14,16 @@ class CreateRequestsTable extends Migration
     public function up()
     {
         Schema::create('requests', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+            $table->increments('id'); 
+            $table->string('title'); 
+            $table->longText('body'); 
+            $table->unsignedBigInteger('to_user_id'); 
+            $table->unsignedBigInteger('from_user_id'); 
+            $table->timestamps(); 
+            $table->index( 'to_user_id' );
+            $table->index( 'from_user_id' );
+            $table->foreign('to_user_id')->references('id')->on('users');
+            $table->foreign('from_user_id')->references('id')->on('users');
         });
     }
 
