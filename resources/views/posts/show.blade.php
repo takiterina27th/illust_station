@@ -78,7 +78,7 @@
                                 @csrf
                                 <input type="hidden" name="post_id"  value="{{ $post->id }}">
                                 <div class="comment__submit-area mt-3">
-                                    <textarea id="comment" name="comment" class="form-control comment__textarea" placeholder="テキストを入力" aria-label="With textarea"></textarea>
+                                    <textarea id="comment" name="comment" class="form-control comment__textarea" placeholder="コメントする" aria-label="With textarea"></textarea>
                                     <button type="input-group-prepend button submit" class="btn btn-outline-primary comment__button">コメントする</button>
                                 </div>
                             </form>
