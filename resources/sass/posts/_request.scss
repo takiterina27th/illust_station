@@ -1,0 +1,33 @@
+.request {
+  display: none;
+  margin-top: 10px;
+  &__area {
+
+  }
+  &__submit-area {
+
+  }
+  &__textarea {
+
+  }
+  &__button {
+    display: block;
+    margin: 10px 0 0 auto;
+  }
+  &__body {
+    padding: 5px 30px 20px 30px;
+    &:hover {
+      background-color: #dfdfdf;
+    }
+  }
+  &__body-user {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  &__body-time {
+    font-size: 10px;
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #a0a0a0;
+  }
+}
