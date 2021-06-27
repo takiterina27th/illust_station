@@ -1,0 +1,49 @@
+.request-tab {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 700px;
+  margin: 0 auto;
+  padding-right: 0px;
+  padding-left: 0px;
+  &__item {
+    width: calc(100%/2);
+    height: 50px;
+    border-bottom: 3px solid #5ab4bd;
+    background-color: #d9d9d9;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #565656;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  &__content {
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+  }
+}
+
+input[name="tab_item"] {
+  display: none;
+}
+
+#receive_request:checked ~ #receive_request_content,
+#send_request:checked ~ #send_request_content {
+  display: block;
+}
+
+.request-tab input:checked + .requesttab__item {
+  background-color: #5ab4bd;
+  color: #fff;
+}

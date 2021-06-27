@@ -1,33 +1,28 @@
 .request {
-  display: none;
-  margin-top: 10px;
-  &__area {
-
-  }
-  &__submit-area {
-
-  }
-  &__textarea {
-
-  }
   &__button {
     display: block;
     margin: 10px 0 0 auto;
   }
   &__body {
     padding: 5px 30px 20px 30px;
+    margin-top: 20px;
+    background-color: #f8f8f8;
     &:hover {
       background-color: #dfdfdf;
     }
   }
-  &__body-user {
+  &__body-title {
     font-weight: bold;
     font-size: 20px;
   }
-  &__body-time {
-    font-size: 10px;
-    margin-top: 10px;
+  &__body-user {
+    font-size: 15px;
+    margin-top: 5px;
     margin-left: 5px;
     color: #a0a0a0;
+  }
+  &__response {
+    text-align: right;
+    margin: 10px 0 0 auto;
   }
 }
