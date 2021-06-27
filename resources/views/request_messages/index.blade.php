@@ -13,7 +13,7 @@
                     あなたへのリクエスト
                 </div>
                 @foreach($requestsToUser as $request)
-                    @include('request_messages.request_message')
+                    @include('request_messages.receive-request_message')
                 @endforeach
             </div>
         </div>
@@ -25,7 +25,7 @@
                     送信済みリクエスト
                 </div>
                 @foreach($requestsFromUser as $request)
-                    @include('request_messages.request_message')
+                    @include('request_messages.send-request_message')
                 @endforeach
             </div>
         </div>
