@@ -36,7 +36,7 @@ Route::group(['middleware' => 'auth'], function(){
     Route::post('update/{id}', 'UserController@update')->name('users.update');
     Route::post('destroy/{id}', 'UserController@destroy')->name('users.destroy');
     Route::post('comments/store', 'CommentController@store')->name('comments.store');
-    Route::post('requests/store', 'RequestController@store')->name('requests.store');
+    Route::post('request_messages/store', 'Request_messageController@store')->name('request_messages.store');
 });
 
 Route::get('tags/show/{id}', 'TagController@show')->name('tags.show');

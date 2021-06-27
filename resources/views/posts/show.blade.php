@@ -101,10 +101,11 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form method="POST" action="{{route('requests.store')}}">
+                            <form method="POST" action="{{route('request_messages.store')}}">
                                 @csrf
                                 <input type="hidden" name="from_user_id"  value="{{ Auth::user()->id }}">
                                 <input type="hidden" name="to_user_id"  value="{{ $post->user->id}}">
+                                <input type="hidden" name="post_id"  value="{{ $post->id }}">
                                 <div class="request__submit-area mt-3">
                                     <input type="text" name="title" class="form-control" placeholder="タイトルを入力">
                                     <textarea name="body" class="form-control request__textarea mt-2" placeholder="描いてほしいテーマやキャラクターの特徴を伝えましょう。" aria-label="With textarea"></textarea>

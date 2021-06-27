@@ -49,10 +49,10 @@ class User extends Authenticatable
     }
 
     public function requestsToUser() {
-        return $this->hasMany('App\Models\Request','to_user_id');
+        return $this->hasMany('App\Models\Request_message','to_user_id');
     }
     public function requestsFromUser() {
-        return $this->hasMany('App\Models\Request','from_user_id');
+        return $this->hasMany('App\Models\Request_message','from_user_id');
     }
 
     /**
