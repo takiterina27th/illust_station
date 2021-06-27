@@ -11008,10 +11008,6 @@ a.text-dark:focus {
   background-color: #f8f8f8;
 }
 
-.request__body:hover {
-  background-color: #dfdfdf;
-}
-
 .request__body-title {
   font-weight: bold;
   font-size: 20px;
