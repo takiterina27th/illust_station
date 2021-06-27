@@ -8,6 +8,14 @@ use App\Models\Request_message;
 
 class Request_messageController extends Controller
 {
+    public function index(Request $request)
+    {
+        $users = User::all()->pluck('name', 'id');
+        $requestsFromUser = User::find(auth()->id())->requestsFromUser;
+        $requestsToUser = User::find(auth()->id())->requestsToUser;
+        return view('request_messages.index', compact('users', 'requestsFromUser', 'requestsToUser'));
+    }
+
     public function store(Request $request)
     {
         $post_id = $request->post_id;
