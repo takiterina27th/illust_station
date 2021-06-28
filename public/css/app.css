@@ -10997,6 +10997,10 @@ a.text-dark:focus {
   color: #a0a0a0;
 }
 
+.request {
+  display: none;
+}
+
 .request__button {
   display: block;
   margin: 10px 0 0 auto;
