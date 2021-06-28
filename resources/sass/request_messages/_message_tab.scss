@@ -43,7 +43,7 @@ input[name="tab_item"] {
   display: block;
 }
 
-.request-tab input:checked + .requesttab__item {
+.request-tab input:checked + .request-tab__item {
   background-color: #5ab4bd;
   color: #fff;
 }
