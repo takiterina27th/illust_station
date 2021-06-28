@@ -7,8 +7,8 @@
     <input id="send_request" type="radio" name="tab_item">
     <label class="request-tab__item" for="send_request">送信リクエスト</label>
     <div class="request-tab__content" id="receive_request_content">
-        <div class="request">
-            <div class="request__area">
+        <div class="request-messages">
+            <div class="request-messages__area">
                 <div class="font-weight-bold text-center">
                     あなたへのリクエスト
                 </div>
@@ -19,8 +19,8 @@
         </div>
     </div>
     <div class="request-tab__content" id="send_request_content">
-        <div vlass="request">
-            <div class="request__area">
+        <div class="request-messages">
+            <div class="request-messages__area">
                 <div class="font-weight-bold text-center">
                     送信済みリクエスト
                 </div>
