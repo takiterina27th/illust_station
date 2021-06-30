@@ -10997,6 +10997,38 @@ a.text-dark:focus {
   color: #a0a0a0;
 }
 
+.request {
+  display: none;
+}
+
+.request__button {
+  display: block;
+  margin: 10px 0 0 auto;
+}
+
+.request__body {
+  padding: 5px 30px 20px 30px;
+  margin-top: 20px;
+  background-color: #f8f8f8;
+}
+
+.request__body-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.request__body-user {
+  font-size: 15px;
+  margin-top: 5px;
+  margin-left: 5px;
+  color: #a0a0a0;
+}
+
+.request__response {
+  text-align: right;
+  margin: 10px 0 0 auto;
+}
+
 .auth-form {
   margin-top: 50px;
   padding: 40px 0 38px;
@@ -11103,5 +11135,86 @@ a.text-dark:focus {
 .auth-button:hover {
   opacity: 0.8;
   color: #f8f9fa;
+}
+
+.request-tab {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 700px;
+  margin: 0 auto;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.request-tab__item {
+  width: calc(100%/2);
+  height: 50px;
+  border-bottom: 3px solid #5ab4bd;
+  background-color: #d9d9d9;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #565656;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.request-tab__item:hover {
+  opacity: 0.75;
+}
+
+.request-tab__content {
+  display: none;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+}
+
+input[name=tab_item] {
+  display: none;
+}
+
+#receive_request:checked ~ #receive_request_content,
+#send_request:checked ~ #send_request_content {
+  display: block;
+}
+
+.request-tab input:checked + .request-tab__item {
+  background-color: #5ab4bd;
+  color: #fff;
+}
+
+.request-messages__button {
+  display: block;
+  margin: 10px 0 0 auto;
+}
+
+.request-messages__body {
+  padding: 5px 30px 20px 30px;
+  margin-top: 20px;
+  background-color: #f8f8f8;
+}
+
+.request-messages__body-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.request-messages__body-user {
+  font-size: 15px;
+  margin-top: 5px;
+  margin-left: 5px;
+  color: #a0a0a0;
+}
+
+.request-messages__response {
+  text-align: right;
+  margin: 10px 0 0 auto;
 }
 

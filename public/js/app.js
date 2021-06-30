@@ -37352,6 +37352,21 @@ $('input').on('change', function () {
 
 /***/ }),
 
+/***/ "./resources/js/assets/request_form.js":
+/*!*********************************************!*\
+  !*** ./resources/js/assets/request_form.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  $('.request-button').on('click', function () {
+    $('#request').fadeToggle();
+  });
+});
+
+/***/ }),
+
 /***/ "./resources/js/bootstrap.js":
 /*!***********************************!*\
   !*** ./resources/js/bootstrap.js ***!
@@ -37409,14 +37424,15 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/js/assets/input_file.js ./resources/sass/app.scss ***!
-  \*************************************************************************************************/
+/*!***************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/js/assets/input_file.js ./resources/js/assets/request_form.js ./resources/sass/app.scss ***!
+  \***************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Applications/MAMP/htdocs/illust_station/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /Applications/MAMP/htdocs/illust_station/resources/js/assets/input_file.js */"./resources/js/assets/input_file.js");
+__webpack_require__(/*! /Applications/MAMP/htdocs/illust_station/resources/js/assets/request_form.js */"./resources/js/assets/request_form.js");
 module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/illust_station/resources/sass/app.scss */"./resources/sass/app.scss");
 
 

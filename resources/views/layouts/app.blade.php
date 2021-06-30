@@ -66,6 +66,9 @@
                                         <a class="dropdown-item" href="{{ route('users.show', [Auth::user()->id]) }}">
                                             <div style="color: #295d72">マイページ</div>
                                         </a>
+                                        <a class="dropdown-item" href="{{ route('request_messages.index') }}">
+                                            <div style="color: #295d72">リクエスト</div>
+                                        </a>
                                     @endauth
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

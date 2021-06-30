@@ -17,6 +17,11 @@
                 <span>{{ $user->email }}</span>
             </div>
               <div>
+                <a href="{{ route('request_messages.index')}}">
+                  <button class="btn btn-primary">リクエストを確認する</button>
+                </a>
+              </div>
+              <div class="mt-3">
                 <a href="{{ route('users.edit', [$user->id])}}">
                   <button class="btn btn-primary">ユーザー登録内容の編集する</button>
                 </a>

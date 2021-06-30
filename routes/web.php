@@ -35,7 +35,9 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('edit/{id}', 'UserController@edit')->name('users.edit');
     Route::post('update/{id}', 'UserController@update')->name('users.update');
     Route::post('destroy/{id}', 'UserController@destroy')->name('users.destroy');
-    Route::post('store', 'CommentController@store')->name('comments.store');
+    Route::post('comments/store', 'CommentController@store')->name('comments.store');
+    Route::post('request_messages/store', 'Request_messageController@store')->name('request_messages.store');
+    Route::get('request_messages/index', 'Request_messageController@index')->name('request_messages.index');
 });
 
 Route::get('tags/show/{id}', 'TagController@show')->name('tags.show');

@@ -48,6 +48,13 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Comment');
     }
 
+    public function requestsToUser() {
+        return $this->hasMany('App\Models\Request_message','to_user_id');
+    }
+    public function requestsFromUser() {
+        return $this->hasMany('App\Models\Request_message','from_user_id');
+    }
+
     /**
      * パスワードリセット通知の送信
      *

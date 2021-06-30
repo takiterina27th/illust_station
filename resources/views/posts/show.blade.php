@@ -78,11 +78,43 @@
                                 @csrf
                                 <input type="hidden" name="post_id"  value="{{ $post->id }}">
                                 <div class="comment__submit-area mt-3">
-                                    <textarea id="comment" name="comment" class="form-control comment__textarea" placeholder="テキストを入力" aria-label="With textarea"></textarea>
+                                    <textarea id="comment" name="comment" class="form-control comment__textarea" placeholder="コメントする" aria-label="With textarea"></textarea>
                                     <button type="input-group-prepend button submit" class="btn btn-outline-primary comment__button">コメントする</button>
                                 </div>
                             </form>
                         </div>
+                        @if(($post->user_id) !== (Auth::user()->id ))
+                        <div class="request-button">
+                            <button type="button" class="btn font-weight-bold button-design">作者にリクエストする</button>
+                        </div>
+                        <div class="request justify-content-center mt-3" id="request">
+                            <div class="request__area">
+                                <div class="font-weight-bold text-center">
+                                    {{ $post->user->name}}さんへのリクエスト
+                                </div>
+                            </div>
+                            @if ($errors->any())
+                                <div class="alert alert-danger mt-3">
+                                    <ul class="mb-0">
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            <form method="POST" action="{{route('request_messages.store')}}">
+                                @csrf
+                                <input type="hidden" name="from_user_id"  value="{{ Auth::user()->id }}">
+                                <input type="hidden" name="to_user_id"  value="{{ $post->user->id}}">
+                                <input type="hidden" name="post_id"  value="{{ $post->id }}">
+                                <div class="request__submit-area mt-3">
+                                    <input type="text" name="title" class="form-control" placeholder="タイトルを入力">
+                                    <textarea name="body" class="form-control request__textarea mt-2" placeholder="描いてほしいテーマやキャラクターの特徴を伝えましょう。" aria-label="With textarea"></textarea>
+                                    <button type="input-group-prepend button submit" class="btn btn-outline-primary request__button">リクエストを送る</button>
+                                </div>
+                            </form>
+                        </div>
+                        @endif
                     @endauth
                 </div>
             </div>
