@@ -11,8 +11,10 @@ class Request_messageController extends Controller
     public function index(Request $request)
     {
         $users = User::all()->pluck('name', 'id');
-        $requestsFromUser = User::find(auth()->id())->requestsFromUser;
-        $requestsToUser = User::find(auth()->id())->requestsToUser;
+        $requestsFromUser = User::find(auth()->id())->requestsFromUser
+        ->sortByDesc('created_at');
+        $requestsToUser = User::find(auth()->id())->requestsToUser
+        ->sortByDesc('created_at');
         return view('request_messages.index', compact('users', 'requestsFromUser', 'requestsToUser'));
     }
 
