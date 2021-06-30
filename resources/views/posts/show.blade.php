@@ -83,6 +83,7 @@
                                 </div>
                             </form>
                         </div>
+                        @if(($post->user_id) !== (Auth::user()->id ))
                         <div class="request-button">
                             <button type="button" class="btn font-weight-bold button-design">作者にリクエストする</button>
                         </div>
@@ -113,6 +114,7 @@
                                 </div>
                             </form>
                         </div>
+                        @endif
                     @endauth
                 </div>
             </div>
