@@ -2,7 +2,7 @@
     <div class="request-messages__media-body request-messages__body">
         <div class="row">
             <span class="request-messages__body-title">{{ $request->title }}</span>
-            <span class="request-messages__body-user">{{ $request->fromUser->name }}</span>
+            <span class="request-messages__body-user">From:{{ $request->fromUser->name }}</span>
         </div>
         <span class="request-messages__body-content">
             {!! nl2br(e($request->body)) !!}
