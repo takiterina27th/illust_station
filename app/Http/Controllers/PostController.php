@@ -36,7 +36,9 @@ class PostController extends Controller
 
         $user = Auth::user();
 
-        return view('posts.index', compact('posts', 'user'));
+        $tags = Tag::inRandomOrder()->take(5)->get();
+
+        return view('posts.index', compact('posts', 'user', 'tags'));
     }
 
     /**
