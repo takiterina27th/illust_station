@@ -1,0 +1,33 @@
+.tags {
+  &__overflow {
+    overflow-x: auto;
+  }
+  &__padding {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  &__display {
+    display: inline-flex;
+  }
+  &__flex {
+    display: flex;
+  }
+  &__link {
+    box-sizing: border-box;
+    text-decoration: none;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 4px;
+    height: 40px;
+    padding-right: 24px;
+    padding-left: 24px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(126, 153, 200);
+    margin-right: 10px;
+    &:hover {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}

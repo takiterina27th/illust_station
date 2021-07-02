@@ -11218,3 +11218,39 @@ input[name=tab_item] {
   margin: 10px 0 0 auto;
 }
 
+.tags__overflow {
+  overflow-x: auto;
+}
+
+.tags__padding {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.tags__display {
+  display: inline-flex;
+}
+
+.tags__flex {
+  display: flex;
+}
+
+.tags__link {
+  box-sizing: border-box;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  height: 40px;
+  padding-right: 24px;
+  padding-left: 24px;
+  color: white;
+  background-color: #7e99c8;
+  margin-right: 10px;
+}
+
+.tags__link:hover {
+  text-decoration: none;
+  color: white;
+}
+

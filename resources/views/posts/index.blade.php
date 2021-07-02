@@ -9,9 +9,11 @@
             <div class="tags">
                 <div class="tags__overflow">
                     <div class="tags__padding">
-                        <div class="tags_display">
+                        <div class="tags__display">
                             @foreach($tags as $tag)
-                                <div class="tags__flex">{{ $tag->name }}</div>
+                                <div class="tags__flex">
+                                    <a class="tags__link" href="">#{{ $tag->name }}</a>
+                                </div>
                             @endforeach
                         </div>
                     </div>
