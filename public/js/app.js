@@ -37367,6 +37367,31 @@ $(function () {
 
 /***/ }),
 
+/***/ "./resources/js/assets/tags-color.js":
+/*!*******************************************!*\
+  !*** ./resources/js/assets/tags-color.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+//付与したいクラスの配列
+var arr = ["tags__link01", "tags__link02", "tags__link03", "tags__link04", "tags__link05", "tags__link06", "tags__link07", "tags__link08"];
+var a = arr.length; //シャッフルアルゴリズム
+
+while (a) {
+  var j = Math.floor(Math.random() * a);
+  var t = arr[--a];
+  arr[a] = arr[j];
+  arr[j] = t;
+} //シャッフルされた配列の要素を順番に表示する
+
+
+arr.forEach(function (value, index) {
+  $(".tags__link").eq(index).addClass(value);
+});
+
+/***/ }),
+
 /***/ "./resources/js/bootstrap.js":
 /*!***********************************!*\
   !*** ./resources/js/bootstrap.js ***!
@@ -37424,15 +37449,16 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!***************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/js/assets/input_file.js ./resources/js/assets/request_form.js ./resources/sass/app.scss ***!
-  \***************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/js/assets/input_file.js ./resources/js/assets/request_form.js ./resources/js/assets/tags-color.js ./resources/sass/app.scss ***!
+  \***************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Applications/MAMP/htdocs/illust_station/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /Applications/MAMP/htdocs/illust_station/resources/js/assets/input_file.js */"./resources/js/assets/input_file.js");
 __webpack_require__(/*! /Applications/MAMP/htdocs/illust_station/resources/js/assets/request_form.js */"./resources/js/assets/request_form.js");
+__webpack_require__(/*! /Applications/MAMP/htdocs/illust_station/resources/js/assets/tags-color.js */"./resources/js/assets/tags-color.js");
 module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/illust_station/resources/sass/app.scss */"./resources/sass/app.scss");
 
 

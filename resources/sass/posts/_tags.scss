@@ -1,0 +1,48 @@
+.tags {
+  &__overflow {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  &__padding {
+    padding-top: 12px;
+    padding-bottom: 16px;
+  }
+  &__display {
+    display: inline-flex;
+  }
+  &__flex {
+    display: flex;
+  }
+  &__link01 {
+    @include tag-button;
+    background-color: rgb(126, 153, 200);
+  }
+  &__link02 {
+    @include tag-button;
+    background-color: rgb(200, 126, 183);
+  }
+  &__link03 {
+    @include tag-button;
+    background-color: rgb(126, 200, 151);
+  }
+  &__link04 {
+    @include tag-button;
+    background-color: rgb(200, 186, 126);
+  }
+  &__link05 {
+    @include tag-button;
+    background-color: rgb(146, 126, 200);
+  }
+  &__link06 {
+    @include tag-button;
+    background-color: rgb(174, 200, 126);
+  }
+  &__link07 {
+    @include tag-button;
+    background-color: rgb(200, 126, 138);
+  }
+  &__link08 {
+    @include tag-button;
+    background-color: rgb(200, 161, 126);
+  }
+}

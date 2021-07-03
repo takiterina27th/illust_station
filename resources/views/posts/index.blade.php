@@ -1,9 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
+    
     <div class="row justify-content-center">
         <div class="col-md-12">
+            <div class="tags">
+                <div class="tags__overflow">
+                    <div class="tags__padding">
+                        <div class="tags__display">
+                            @foreach($tags as $tag)
+                                <div class="tags__flex">
+                                    <a class="tags__link" href="{{ route('tags.show', ['id' => $tag->id]) }}">#{{ $tag->name }}</a>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="card">
 
                 <div class="card-body">

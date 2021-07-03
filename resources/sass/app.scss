@@ -7,6 +7,8 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+@import 'mixin/tag-button';
+
 @import 'posts/input_type_image.scss';
 
 @import 'button';
@@ -22,3 +24,5 @@
 @import 'request_messages/message_tab';
 
 @import 'request_messages/request_messages';
+
+@import 'posts/tags';

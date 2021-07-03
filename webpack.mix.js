@@ -18,5 +18,6 @@ mix.js([
     'resources/js/app.js',
     'resources/js/assets/input_file.js',
     'resources/js/assets/request_form.js',
+    'resources/js/assets/tags-color.js',
     ], 'public/js/app.js')
    .sass('resources/sass/app.scss', 'public/css');
