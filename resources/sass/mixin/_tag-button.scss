@@ -1,0 +1,17 @@
+@mixin tag-button {
+  box-sizing: border-box;
+  text-decoration: none;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 4px;
+  height: 40px;
+  padding-right: 24px;
+  padding-left: 24px;
+  color: rgb(255, 255, 255);
+  margin-right: 10px;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
