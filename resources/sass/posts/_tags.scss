@@ -1,6 +1,7 @@
 .tags {
   &__overflow {
     overflow-x: auto;
+    white-space: nowrap;
   }
   &__padding {
     padding-top: 12px;

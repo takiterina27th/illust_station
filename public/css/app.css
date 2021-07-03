@@ -11220,6 +11220,7 @@ input[name=tab_item] {
 
 .tags__overflow {
   overflow-x: auto;
+  white-space: nowrap;
 }
 
 .tags__padding {
