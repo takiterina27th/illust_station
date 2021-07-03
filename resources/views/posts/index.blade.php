@@ -12,7 +12,7 @@
                         <div class="tags__display">
                             @foreach($tags as $tag)
                                 <div class="tags__flex">
-                                    <a class="tags__link" href="">#{{ $tag->name }}</a>
+                                    <a class="tags__link" href="{{ route('tags.show', ['id' => $tag->id]) }}">#{{ $tag->name }}</a>
                                 </div>
                             @endforeach
                         </div>
