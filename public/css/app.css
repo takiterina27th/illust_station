@@ -11330,3 +11330,60 @@ input[name=tab_item] {
   color: white;
 }
 
+.tags__link06 {
+  box-sizing: border-box;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  height: 40px;
+  padding-right: 24px;
+  padding-left: 24px;
+  color: white;
+  margin-right: 10px;
+  background-color: #aec87e;
+}
+
+.tags__link06:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.tags__link07 {
+  box-sizing: border-box;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  height: 40px;
+  padding-right: 24px;
+  padding-left: 24px;
+  color: white;
+  margin-right: 10px;
+  background-color: #c87e8a;
+}
+
+.tags__link07:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.tags__link08 {
+  box-sizing: border-box;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  height: 40px;
+  padding-right: 24px;
+  padding-left: 24px;
+  color: white;
+  margin-right: 10px;
+  background-color: #c8a17e;
+}
+
+.tags__link08:hover {
+  text-decoration: none;
+  color: white;
+}
+

@@ -37375,7 +37375,7 @@ $(function () {
 /***/ (function(module, exports) {
 
 //付与したいクラスの配列
-var arr = ["tags__link01", "tags__link02", "tags__link03", "tags__link04", "tags__link05"];
+var arr = ["tags__link01", "tags__link02", "tags__link03", "tags__link04", "tags__link05", "tags__link06", "tags__link07", "tags__link08"];
 var a = arr.length; //シャッフルアルゴリズム
 
 while (a) {

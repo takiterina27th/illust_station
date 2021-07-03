@@ -32,4 +32,16 @@
     @include tag-button;
     background-color: rgb(146, 126, 200);
   }
+  &__link06 {
+    @include tag-button;
+    background-color: rgb(174, 200, 126);
+  }
+  &__link07 {
+    @include tag-button;
+    background-color: rgb(200, 126, 138);
+  }
+  &__link08 {
+    @include tag-button;
+    background-color: rgb(200, 161, 126);
+  }
 }
