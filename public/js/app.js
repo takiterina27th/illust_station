@@ -37389,6 +37389,7 @@ while (a) {
 arr.forEach(function (value, index) {
   $(".tags__link").eq(index).addClass(value);
 });
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Applications/MAMP/htdocs/illust_station/resources/js/assets/tags-color.js'");
 
 /***/ }),
 
