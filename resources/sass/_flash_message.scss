@@ -1,0 +1,21 @@
+.flash {
+  position: relative;
+  &__message {
+    width: 30%;
+    height: 30px;
+    font-size: 12px;
+    line-height:30px;
+    text-align: center;
+    padding: 0;
+    z-index: 1;
+    color: #FFFFFF;
+    border-radius: 20px;
+    background-color: #7ec897;
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+  }
+}
