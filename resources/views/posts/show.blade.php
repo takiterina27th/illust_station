@@ -4,14 +4,16 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            @if (session('status'))
+                <div class="flash" role="alert">
+                    <div class="flash__message">
+                        {{ session('status') }}
+                    </div>
+                </div>
+            @endif
             <div class="card">
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
 
                     <div class="alert alert-info font-weight-bold" role="alert">
                       <span>タイトル：</span>
