@@ -29,6 +29,7 @@ class Request_messageController extends Controller
         $message->from_user_id = auth()->id();
         $message->save();
         
+        session()->flash('status', 'リクエストを送信しました');
         return redirect()->route('posts.show', ['id' => $post_id ]);
     }
 }

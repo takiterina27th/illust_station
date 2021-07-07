@@ -20,6 +20,7 @@ class CommentController extends Controller
             'post_id' => $post_id,
             'comment' => $comment
         ]);
+        session()->flash('status', 'コメントしました');
         return redirect()->route('posts.show', ['id' => $post_id ]);
     }
 }

@@ -37338,6 +37338,21 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 /***/ }),
 
+/***/ "./resources/js/assets/flash_message.js":
+/*!**********************************************!*\
+  !*** ./resources/js/assets/flash_message.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  $('.flash').hide().fadeIn("slow", function () {
+    $(this).delay(3000).fadeOut("slow");
+  });
+});
+
+/***/ }),
+
 /***/ "./resources/js/assets/input_file.js":
 /*!*******************************************!*\
   !*** ./resources/js/assets/input_file.js ***!
@@ -37449,9 +37464,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!***************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/js/assets/input_file.js ./resources/js/assets/request_form.js ./resources/js/assets/tags-color.js ./resources/sass/app.scss ***!
-  \***************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/js/assets/input_file.js ./resources/js/assets/request_form.js ./resources/js/assets/tags-color.js ./resources/js/assets/flash_message.js ./resources/sass/app.scss ***!
+  \******************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37459,6 +37474,7 @@ __webpack_require__(/*! /Applications/MAMP/htdocs/illust_station/resources/js/ap
 __webpack_require__(/*! /Applications/MAMP/htdocs/illust_station/resources/js/assets/input_file.js */"./resources/js/assets/input_file.js");
 __webpack_require__(/*! /Applications/MAMP/htdocs/illust_station/resources/js/assets/request_form.js */"./resources/js/assets/request_form.js");
 __webpack_require__(/*! /Applications/MAMP/htdocs/illust_station/resources/js/assets/tags-color.js */"./resources/js/assets/tags-color.js");
+__webpack_require__(/*! /Applications/MAMP/htdocs/illust_station/resources/js/assets/flash_message.js */"./resources/js/assets/flash_message.js");
 module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/illust_station/resources/sass/app.scss */"./resources/sass/app.scss");
 
 

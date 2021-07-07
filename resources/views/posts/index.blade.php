@@ -3,7 +3,14 @@
 @section('content')
 
 <div class="container">
-    
+    @if (session('status'))
+        <div class="flash" role="alert">
+            <div class="flash__message">
+                <i class="far fa-check-square"></i>
+                {{ session('status') }}
+            </div>
+        </div>
+    @endif
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="tags">
@@ -22,11 +29,6 @@
             <div class="card">
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
                     @auth

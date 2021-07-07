@@ -89,7 +89,8 @@ class PostController extends Controller
         $post->save();
 
         $post->tag()->attach($tags_id);
-
+        
+        session()->flash('status', '投稿が完了しました');
         return redirect('/');
     }
 
@@ -163,6 +164,7 @@ class PostController extends Controller
 
         $post->save();
 
+        session()->flash('status', '投稿内容を変更しました');
         return redirect('/');
     }
 
@@ -177,6 +179,7 @@ class PostController extends Controller
         $post = Post::find($id);
         $post->delete();
 
+        session()->flash('status', '投稿を削除しました');
         return redirect('/');
     }
 }
