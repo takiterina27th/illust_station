@@ -7,6 +7,7 @@
             @if (session('status'))
                 <div class="flash" role="alert">
                     <div class="flash__message">
+                        <i class="far fa-check-square"></i>
                         {{ session('status') }}
                     </div>
                 </div>
