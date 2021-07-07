@@ -37346,7 +37346,9 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 /***/ (function(module, exports) {
 
 $(function () {
-  $('.flash').fadeOut(3000);
+  $('.flash').hide().fadeIn("slow", function () {
+    $(this).delay(3000).fadeOut("slow");
+  });
 });
 
 /***/ }),
