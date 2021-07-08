@@ -19,7 +19,7 @@ class Request_messageController extends Controller
         return view('request_messages.index', compact('users', 'requestsFromUser', 'requestsToUser'));
     }
 
-    public function store(Request $request)
+    public function store(Request_messageRequest $request)
     {
         $post_id = $request->post_id;
 
