@@ -68,10 +68,10 @@
                                     @include('comments.comment')
                                 @endforeach
                             </div>
-                            @if ($errors->any())
+                            @if ($errors->has('comment'))
                                 <div class="alert alert-danger mt-3">
                                     <ul class="mb-0">
-                                        @foreach ($errors->all() as $error)
+                                        @foreach ($errors->get('comment') as $error)
                                             <li>{{ $error }}</li>
                                         @endforeach
                                     </ul>
@@ -96,10 +96,10 @@
                                     {{ $post->user->name}}さんへのリクエスト
                                 </div>
                             </div>
-                            @if ($errors->any())
+                            @if ($errors->has('title'))
                                 <div class="alert alert-danger mt-3">
                                     <ul class="mb-0">
-                                        @foreach ($errors->all() as $error)
+                                        @foreach ($errors->get('title') as $error)
                                             <li>{{ $error }}</li>
                                         @endforeach
                                     </ul>
@@ -112,6 +112,15 @@
                                 <input type="hidden" name="post_id"  value="{{ $post->id }}">
                                 <div class="request__submit-area mt-3">
                                     <input type="text" name="title" class="form-control" placeholder="タイトルを入力">
+                                    @if ($errors->has('body'))
+                                        <div class="alert alert-danger mt-3">
+                                            <ul class="mb-0">
+                                                @foreach ($errors->get('body') as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
                                     <textarea name="body" class="form-control request__textarea mt-2" placeholder="描いてほしいテーマやキャラクターの特徴を伝えましょう。" aria-label="With textarea"></textarea>
                                     <button type="input-group-prepend button submit" class="btn btn-outline-primary request__button">リクエストを送る</button>
                                 </div>

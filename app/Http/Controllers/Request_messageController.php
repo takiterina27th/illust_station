@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Models\Request_message;
+use App\Http\Requests\Request_messageRequest;
 
 class Request_messageController extends Controller
 {
@@ -18,7 +19,7 @@ class Request_messageController extends Controller
         return view('request_messages.index', compact('users', 'requestsFromUser', 'requestsToUser'));
     }
 
-    public function store(Request $request)
+    public function store(Request_messageRequest $request)
     {
         $post_id = $request->post_id;
 
