@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Models\Request_message;
+use App\Http\Requests\Request_messageRequest;
 
 class Request_messageController extends Controller
 {
