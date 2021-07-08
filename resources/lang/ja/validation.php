@@ -122,6 +122,7 @@ return [
         'content' => '内容',
         'image' => '画像',
         'comment' => 'コメント',
+        'body' => 'リクエスト',
     ],
 
 ];
