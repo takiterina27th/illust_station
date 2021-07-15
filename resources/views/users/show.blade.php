@@ -3,8 +3,30 @@
 @section('content')
 
 <div class="container m-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 profile">
+            <div class="profile__header">
+                <div class="profile__left">
+                    <div class="profile__image">
+                    </div>
+                </div>
+                <div class="profile__right">
+                    <div class="profile__username">
+                    </div>
+                    <div class="profile__edit">
+                    </div>
+                </div>
+            </div>
+            <div class="profile__main">
+                <div class="profile__request"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container m-5">
   <div class="row justify-content-center">
-    <div class="col-md-8">
+    <div class="col-md-8 profile">
       <div class="card">
         <div class="card-header">ユーザー登録内容</div>
         <div class="card-body">
