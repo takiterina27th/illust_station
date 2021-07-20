@@ -8,12 +8,17 @@
             <div class="profile__header">
                 <div class="profile__left">
                     <div class="profile__image">
+                        <img src="https://illust-station-takiterina-bucket.s3-ap-northeast-1.amazonaws.com/3h0TDmfZqpp7d2D1nM2dhc5Lus4QSnodVCMVn3r5.png" width="100" height="100" class="img-fluid" alt="ロゴ">
                     </div>
                 </div>
                 <div class="profile__right">
                     <div class="profile__username">
+                        {{ $user->name }}
                     </div>
                     <div class="profile__edit">
+                        <a href="{{ route('users.edit', [$user->id])}}" class="profile__edit-a-tag">
+                            プロフィールを編集
+                        </a>
                     </div>
                 </div>
             </div>
