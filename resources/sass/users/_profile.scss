@@ -53,13 +53,18 @@
     border-radius: 100vw;
     font-size: 14px;
     font-weight: 700;
-    background-color: #fff;
+    // background-color: #fff;
     -webkit-transition: background-color .2s;
     transition: background-color .2s;
     color: #666;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
+    &:hover {
+      background-color: #dcdcdc;
+      color: #666;
+      text-decoration: none;
+    }
   }
   &__main {
 

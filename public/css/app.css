@@ -11470,11 +11470,16 @@ input[name=tab_item] {
   border-radius: 100vw;
   font-size: 14px;
   font-weight: 700;
-  background-color: #fff;
   transition: background-color 0.2s;
   color: #666;
   cursor: pointer;
   text-align: center;
+  text-decoration: none;
+}
+
+.profile__edit-a-tag:hover {
+  background-color: #dcdcdc;
+  color: #666;
   text-decoration: none;
 }
 
