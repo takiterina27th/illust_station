@@ -31,7 +31,7 @@
 
 <div class="container m-5">
   <div class="row justify-content-center">
-    <div class="col-md-8 profile">
+    <div class="col-md-8">
       <div class="card">
         <div class="card-header">ユーザー登録内容</div>
         <div class="card-body">
