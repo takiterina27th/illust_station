@@ -11420,8 +11420,6 @@ input[name=tab_item] {
   position: sticky;
   bottom: 0px;
   margin: 0px auto;
-  padding-right: 72px;
-  padding-left: 72px;
   display: flex;
 }
 
