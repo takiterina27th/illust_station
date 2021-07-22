@@ -11481,6 +11481,76 @@ input[name=tab_item] {
   text-decoration: none;
 }
 
+.profile__main {
+  padding: 0px 0px 0px;
+  min-height: 5vh;
+  margin-top: 40px;
+}
+
+.profile__links {
+  display: flex;
+}
+
+.profile__form {
+  margin-left: auto;
+}
+
+.profile__a-tag {
+  padding: 0.1em 0.3em;
+  position: relative;
+  display: inline-block;
+  transition: 0.3s;
+  color: #2196f4;
+}
+
+.profile__a-tag::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #2196f4;
+  transition: 0.3s;
+}
+
+.profile__a-tag:hover::after {
+  width: 100%;
+}
+
+.profile__a-tag:hover {
+  text-decoration: none;
+  color: #2196f4;
+}
+
+.profile__delete {
+  padding: 0.1em 0.3em;
+  position: relative;
+  display: inline-block;
+  transition: 0.3s;
+  color: #EC407A;
+}
+
+.profile__delete::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #EC407A;
+  transition: 0.3s;
+}
+
+.profile__delete:hover::after {
+  width: 100%;
+}
+
+.profile__delete:hover {
+  text-decoration: none;
+  color: #EC407A;
+}
+
 /*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)

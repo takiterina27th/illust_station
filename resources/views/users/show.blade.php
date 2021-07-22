@@ -23,13 +23,26 @@
                 </div>
             </div>
             <div class="profile__main">
-                <div class="profile__request"></div>
+                <div class="profile__links">
+                    <div class="profile__request profile__link">
+                        <a href="{{ route('request_messages.index')}}" class="profile__a-tag">リクエスト</a>
+                    </div>
+                    <div class="profile__request profile__link">
+                        <a href="#" class="profile__a-tag">作品一覧</a>
+                    </div>
+                    <form method="POST" action="{{ route('users.destroy', [$user->id])}}" id="delete_{{ $user->id}}"class="profile__form">
+                        @csrf
+                        <div class="profile__link">
+                            <a href="#" class="profile__a-tag profile__delete" data-id="{{ $user->id }}" onclick="deletePost(this); ">アカウントを削除する</a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container m-5">
+<!-- <div class="container m-5">
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="card">
@@ -62,7 +75,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <script>
 function deletePost(e) {
