@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container m-5">
+<div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8 profile">
             <div class="profile__header">
