@@ -2,39 +2,44 @@
 
 @section('content')
 
-<div class="container m-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card">
-        <div class="card-header">ユーザー登録内容</div>
-        <div class="card-body">
-            <div class="form-group">
-                <span>名前：</span>
-                <span>{{ $user->name }}</span>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 profile">
+            <div class="profile__header">
+                <div class="profile__left">
+                    <div class="profile__image">
+                        <img src="https://illust-station-takiterina-bucket.s3-ap-northeast-1.amazonaws.com/user-icon-silhouette.png" width="100" height="100" class="img-fluid" alt="ロゴ">
+                    </div>
+                </div>
+                <div class="profile__right">
+                    <div class="profile__username">
+                        {{ $user->name }}
+                    </div>
+                    <div class="profile__edit">
+                        <a href="{{ route('users.edit', [$user->id])}}" class="profile__edit-a-tag">
+                            プロフィールを編集
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <span>メールアドレス：</span>
-                <span>{{ $user->email }}</span>
+            <div class="profile__main">
+                <div class="profile__links">
+                    <div class="profile__request profile__link">
+                        <a href="{{ route('request_messages.index')}}" class="profile__a-tag">リクエスト</a>
+                    </div>
+                    <div class="profile__request profile__link">
+                        <a href="#" class="profile__a-tag">作品一覧</a>
+                    </div>
+                    <form method="POST" action="{{ route('users.destroy', [$user->id])}}" id="delete_{{ $user->id}}"class="profile__form">
+                        @csrf
+                        <div class="profile__link">
+                            <a href="#" class="profile__a-tag profile__delete" data-id="{{ $user->id }}" onclick="deletePost(this); ">アカウントを削除する</a>
+                        </div>
+                    </form>
+                </div>
             </div>
-              <div>
-                <a href="{{ route('request_messages.index')}}">
-                  <button class="btn btn-primary">リクエストを確認する</button>
-                </a>
-              </div>
-              <div class="mt-3">
-                <a href="{{ route('users.edit', [$user->id])}}">
-                  <button class="btn btn-primary">ユーザー登録内容の編集する</button>
-                </a>
-              </div>
-                <form method="POST" action="{{ route('users.destroy', [$user->id])}}" id="delete_{{ $user->id}}">
-                  @csrf
-                  <br>
-                  <a href="#" class="btn btn-outline-danger" data-id="{{ $user->id }}" onclick="deletePost(this); ">アカウントを削除する</a>
-                </form>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
 <script>

@@ -11411,6 +11411,146 @@ input[name=tab_item] {
   -ms-transform: translateX(-50%);
 }
 
+.profile {
+  background-color: #fff;
+}
+
+.profile__header {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0px;
+  margin: 0px auto;
+  display: flex;
+}
+
+.profile__left {
+  margin-right: 24px;
+  margin-top: -24px;
+}
+
+.profile__image {
+  display: block;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  overflow: hidden;
+  width: 96px;
+  height: 96px;
+  border: 2px solid white;
+  margin: -2px;
+  position: relative;
+}
+
+.profile__right {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  flex: 1 1 0%;
+  display: flex;
+}
+
+.profile__username {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: bold;
+  display: flow-root;
+  color: rgba(0, 0, 0, 0.88);
+  margin: 0px;
+}
+
+.profile__edit {
+  margin-left: auto;
+}
+
+.profile__edit-a-tag {
+  background-color: #f5f5f5;
+  padding: 9px 24px;
+  line-height: 22px;
+  border: none;
+  border-radius: 100vw;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background-color 0.2s;
+  color: #666;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.profile__edit-a-tag:hover {
+  background-color: #dcdcdc;
+  color: #666;
+  text-decoration: none;
+}
+
+.profile__main {
+  padding: 0px 0px 0px;
+  min-height: 5vh;
+  margin-top: 40px;
+}
+
+.profile__links {
+  display: flex;
+}
+
+.profile__form {
+  margin-left: auto;
+}
+
+.profile__a-tag {
+  padding: 0.1em 0.3em;
+  position: relative;
+  display: inline-block;
+  transition: 0.3s;
+  color: #2196f4;
+}
+
+.profile__a-tag::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #2196f4;
+  transition: 0.3s;
+}
+
+.profile__a-tag:hover::after {
+  width: 100%;
+}
+
+.profile__a-tag:hover {
+  text-decoration: none;
+  color: #2196f4;
+}
+
+.profile__delete {
+  padding: 0.1em 0.3em;
+  position: relative;
+  display: inline-block;
+  transition: 0.3s;
+  color: #EC407A;
+}
+
+.profile__delete::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #EC407A;
+  transition: 0.3s;
+}
+
+.profile__delete:hover::after {
+  width: 100%;
+}
+
+.profile__delete:hover {
+  text-decoration: none;
+  color: #EC407A;
+}
+
 /*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
