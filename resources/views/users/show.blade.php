@@ -28,7 +28,7 @@
                         <a href="{{ route('request_messages.index')}}" class="profile__a-tag">リクエスト</a>
                     </div>
                     <div class="profile__request profile__link">
-                        <a href="#" class="profile__a-tag">作品一覧</a>
+                        <a href="{{ route('users.post_show', [Auth::user()->id]) }}" class="profile__a-tag">作品一覧</a>
                     </div>
                     <form method="POST" action="{{ route('users.destroy', [$user->id])}}" id="delete_{{ $user->id}}"class="profile__form">
                         @csrf
