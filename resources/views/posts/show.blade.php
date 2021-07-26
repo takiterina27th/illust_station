@@ -29,10 +29,12 @@
                     </div>
                     
                     <div class="border-bottom pb-2">
-                    <span class="ml-3" >{{ $post->user->name}}：：</span>{{ $post->content}}</div>
+                    <span class="ml-3" >
+                    <a href="{{ route('users.post_show', [Auth::user()->id]) }}">{{ $post->user->name}}</a>
+                    ：</span>{{ $post->content}}</div>
 
                     <div class="border-bottom pt-2 pb-2">
-                    <span class="ml-3">投稿日：：</span>{{ $post->created_at}}
+                    <span class="ml-3">投稿日：</span>{{ $post->created_at}}
                     </div>
 
                     <div class="mt-2">

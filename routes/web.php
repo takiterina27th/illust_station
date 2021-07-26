@@ -41,6 +41,8 @@ Route::group(['middleware' => 'auth'], function(){
 });
 
 Route::get('tags/show/{id}', 'TagController@show')->name('tags.show');
+Route::get('post_show/{id}', 'UserController@post_show')->name('users.post_show');
+
 
 Route::get('login/twitter', 'Auth\LoginController@redirectToTwitterProvider');
 Route::get('login/twitter/callback', 'Auth\LoginController@handleTwitterProviderCallback');

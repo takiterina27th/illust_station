@@ -16,6 +16,14 @@ class UserController extends Controller
         return view('users.show', compact('user'));
 
     }
+
+    public function post_show($id) {
+
+        $user = User::find($id);
+
+        return view('users.post_show', compact('user'));
+
+    }
     
     public function edit() {
 
