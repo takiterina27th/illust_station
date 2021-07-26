@@ -30,7 +30,7 @@
                     
                     <div class="border-bottom pb-2">
                     <span class="ml-3" >
-                    <a href="{{ route('users.post_show', [Auth::user()->id]) }}">{{ $post->user->name}}</a>
+                    <a href="{{ route('users.post_show', ['id' => $post->user->id]) }}">{{ $post->user->name}}</a>
                     ：</span>{{ $post->content}}</div>
 
                     <div class="border-bottom pt-2 pb-2">
