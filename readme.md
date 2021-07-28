@@ -67,3 +67,8 @@ illust stationはユーザーが作成したイラストを画像ファイルと
 
 # DB設計
 ![illust_station_ER図 - データベース ER 図 (カラスの足記法)](https://user-images.githubusercontent.com/52768993/124953761-61568e00-e050-11eb-85af-38f61cc895a3.png)
+
+# Assignment
+- 投稿へのいいね機能及びいいねのランキング機能の追加
+- 複数ワード検索機能の追加
+- パンくずリストの追加
