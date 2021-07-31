@@ -1,4 +1,4 @@
-# illust station
+# illust station(通称：イラステ)
 ![5c7ee7900700ed12a8be543e1f88ff14](https://user-images.githubusercontent.com/52768993/124945196-e178f580-e048-11eb-8c2a-0fc09c5d199b.jpeg)
 
 # Introduction
