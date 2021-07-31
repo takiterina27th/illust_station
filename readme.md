@@ -1,4 +1,4 @@
-# illust station
+# illust station(通称：イラステ)
 ![5c7ee7900700ed12a8be543e1f88ff14](https://user-images.githubusercontent.com/52768993/124945196-e178f580-e048-11eb-8c2a-0fc09c5d199b.jpeg)
 
 # Introduction
@@ -49,21 +49,26 @@ illust stationはユーザーが作成したイラストを画像ファイルと
 
 ## サインアップ
 ![twitter_signup_function](https://user-images.githubusercontent.com/52768993/127735412-2a75141d-9147-45e7-a9c6-ff822f2e725a.gif)
+<br>
 必要事項を記入し新規登録が可能である。ツイッターアカウントがログイン状態であればTwitter APIを用いてツイッターアカウントでサインアップ可能である。
 
 ## ログイン
 ![login_function](https://user-images.githubusercontent.com/52768993/127735367-3c3a1613-dddc-47cd-8eee-8fbd6837606c.gif)
+<br>
 ![twitter_login_function](https://user-images.githubusercontent.com/52768993/127735398-d5265970-9f4b-4fd2-8ecf-5f117161befc.gif)
+<br>
 登録したユーザーがログインできる。Twitter APIを用いてログインも可能である。また、パスワードを失念した際は、再設定リンクを登録したアドレスに送信可能である。
 
 ## 投稿詳細ページ
 ![post_show_display](https://user-images.githubusercontent.com/52768993/127735384-9c2cf1f6-edac-4e1a-830e-8b00fc2f7cca.gif)
+<br>
 投稿画像、タイトル、作者、メッセージが閲覧可能である。また、投稿へのコメントフォーム及び作者へのリクエストフォームが配置されている。
 
 ## リクエスト機能
 <img width="728" alt="c857cea4444cec8b0b4da99bcc5f7f57" src="https://user-images.githubusercontent.com/52768993/124951337-366b3a80-e04e-11eb-8e67-55f40900c4c4.png">
 
 ![request_function](https://user-images.githubusercontent.com/52768993/127735389-8e44fc53-0d2a-4943-ab8d-33d1adb67397.gif)
+<br>
 作者に描いて欲しいイラストの詳細を記述し、作者のマイページへと送信する。
 その後、作者がリクエストに答えてイラストを投稿する。
 
