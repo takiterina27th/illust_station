@@ -11388,6 +11388,14 @@ input[name=tab_item] {
   color: white;
 }
 
+.show__text {
+  display: flex;
+}
+
+.show__user {
+  margin-left: 16px;
+}
+
 .flash {
   position: relative;
 }
