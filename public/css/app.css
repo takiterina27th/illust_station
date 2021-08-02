@@ -11394,6 +11394,7 @@ input[name=tab_item] {
 
 .show__user {
   margin-left: 16px;
+  white-space: nowrap;
 }
 
 .flash {
