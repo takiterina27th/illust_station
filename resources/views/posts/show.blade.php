@@ -36,9 +36,6 @@
                             <div class="show__content">
                                 ：{{ $post->content}}
                             </div>
-                            <!-- <span class="ml-3" > -->
-                            
-                            <!-- ：</span> -->
                         </div>
 
                         <div class="border-bottom pt-2 pb-2">
