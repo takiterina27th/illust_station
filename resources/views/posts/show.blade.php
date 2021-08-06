@@ -55,7 +55,7 @@
                         @auth
                             @if(($post->user_id) === (Auth::user()->id ))
                                 <div class="d-flex mt-3">
-                                    <a href="{{ route('posts.edit', ['id' => $post->id])}}">
+                                    <a href="{{ route('posts.edit', ['id' => $post->id])}}" class="ml-auto">
                                         <input class="btn btn-primary" type="submit" value="変更する">
                                     </a>
                                     <div class="ml-3">
