@@ -55,6 +55,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Request_message','from_user_id');
     }
 
+    public function likes()
+    {
+        return $this->hasMany('App\Models\Like');
+    }
+
     /**
      * パスワードリセット通知の送信
      *
