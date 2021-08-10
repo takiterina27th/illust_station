@@ -28,6 +28,7 @@ Route::group(['prefix' => 'posts', 'middleware' => 'auth'], function(){
     Route::get('edit/{id}', 'PostController@edit')->name('posts.edit');
     Route::post('update/{id}', 'PostController@update')->name('posts.update');
     Route::post('destroy/{id}', 'PostController@destroy')->name('posts.destroy');
+    Route::post('ajaxlike', 'PostsController@ajaxlike')->name('posts.ajaxlike');
 });
 
 Route::group(['middleware' => 'auth'], function(){  
