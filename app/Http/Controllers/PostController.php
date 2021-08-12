@@ -103,9 +103,16 @@ class PostController extends Controller
      */
     public function show($id)
     {
+        $data = [];
         $post = Post::find($id);
+        $like_model = new Like;
 
-        return view('posts.show', compact('post'));
+        $data = [
+                'post' => $post,
+                'like_model' => $like_model,
+            ];
+
+        return view('posts.show', compact('post', 'data'));
     }
 
     /**
