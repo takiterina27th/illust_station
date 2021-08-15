@@ -41,7 +41,7 @@
                         <div class="border-bottom pt-2 pb-2">
                         <span class="ml-3">投稿日：</span>{{ $post->created_at}}
                         </div>
-
+                        @auth
                         @if($like_model->like_exist(Auth::user()->id,$post->id))
                             <p class="favorite-marke">
                                 <a class="js-like-toggle loved" href="" data-postid="{{ $post->id }}"><i class="fas fa-heart"></i></a>
@@ -53,6 +53,7 @@
                                 <span class="likesCount">{{$post->likes_count}}</span>
                             </p>
                         @endif​
+                        @endauth
 
                         <div class="mt-2">
                             @foreach($post->tag as $post_tag)
