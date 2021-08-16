@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Tag;
+use App\Models\Like;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StorePost;
 use Illuminate\Support\Facades\Storage;
@@ -102,9 +103,16 @@ class PostController extends Controller
      */
     public function show($id)
     {
+        $data = [];
         $post = Post::find($id);
+        $like_model = new Like;
 
-        return view('posts.show', compact('post'));
+        $data = [
+                'post' => $post,
+                'like_model' => $like_model,
+            ];
+
+        return view('posts.show', compact('post', 'data'));
     }
 
     /**
@@ -181,5 +189,10 @@ class PostController extends Controller
 
         session()->flash('status', '投稿を削除しました');
         return redirect('/');
+    }
+
+    public function ajaxlike(Request $request)
+    {
+
     }
 }

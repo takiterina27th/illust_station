@@ -20,5 +20,7 @@ mix.js([
     'resources/js/assets/request_form.js',
     'resources/js/assets/tags-color.js',
     'resources/js/assets/flash_message.js',
+    'resources/js/assets/ajax_like.js',
     ], 'public/js/app.js')
-   .sass('resources/sass/app.scss', 'public/css');
+   .sass('resources/sass/app.scss', 'public/css')
+   .version();
